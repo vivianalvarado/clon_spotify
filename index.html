@@ -11,78 +11,77 @@
     <div class="app-container">
         <!-- ==================== SIDEBAR EXPANDIBLE ==================== -->
         <aside class="sidebar" id="sidebar">
-            <!-- Botón para expandir/contraer -->
-            <button class="sidebar-toggle" id="sidebar-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            
-            <div class="sidebar-logo">
-                <i class="fa-brands fa-spotify"></i>
-                <span class="logo-text">Spotify</span>
-            </div>
-            
-            <nav class="nav-section">
-                <ul>
-                    <li>
-                        <a href="#" id="nav-home" class="active">
-                            <i class="fa-solid fa-house"></i>
-                            <span class="nav-text">Inicio</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" id="nav-search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <span class="nav-text">Buscar</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="sidebar-inner">
+                <!-- Logo -->
+                <div class="sidebar-logo">
+                    <i class="fa-brands fa-spotify"></i>
+                    <span class="logo-text">Spotify</span>
+                </div>
+                
+                <!-- Navegación principal -->
+                <nav class="nav-section">
+                    <ul>
+                        <li>
+                            <a href="#" id="nav-home" class="active">
+                                <i class="fa-solid fa-house"></i>
+                                <span class="nav-text">Inicio</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="nav-search">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span class="nav-text">Buscar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-            <div class="library-sidebar">
-                <div class="library-header-sidebar">
-                    <button id="nav-library" class="library-btn">
+                <!-- Tu Biblioteca -->
+                <div class="library-sidebar">
+                    <a href="#" id="nav-library" class="library-btn">
                         <i class="fa-solid fa-book"></i>
                         <span class="nav-text">Tu Biblioteca</span>
-                    </button>
-                    <button id="create-playlist-btn" class="add-playlist-btn">
+                    </a>
+                </div>
+
+                <!-- Botón + Crear -->
+                <div class="create-section">
+                    <a href="#" id="create-playlist-btn" class="add-playlist-btn">
                         <i class="fa-solid fa-plus"></i>
-                        <span class="nav-text">Crear</span>
-                    </button>
+                        <span class="nav-text">Crear Playlist</span>
+                    </a>
                 </div>
-                <div class="library-playlists-preview">
-                    <div class="preview-item">
-                        <i class="fa-solid fa-heart"></i>
-                        <span class="nav-text">Tus Me Gusta</span>
+
+                <!-- Separador -->
+                <div class="sidebar-divider"></div>
+
+                <!-- Tus Playlists -->
+                <div class="playlists-section">
+                    <div class="playlists-header">
+                        <span>TUS PLAYLISTS</span>
                     </div>
-                    <div class="preview-item">
-                        <i class="fa-solid fa-clock"></i>
-                        <span class="nav-text">Recientes</span>
+                    <div id="playlistsContainer">
+                        <!-- "Canciones que me gustan" se creará dinámicamente sin duplicar -->
                     </div>
                 </div>
-            </div>
-            
-            <!-- Pie del sidebar -->
-            <div class="sidebar-footer">
-                <a href="#" class="footer-link">
-                    <i class="fa-regular fa-globe"></i>
-                    <span class="nav-text">Español</span>
-                </a>
+                
+                <!-- Footer del sidebar -->
+                <div class="sidebar-footer">
+                    <a href="#" class="footer-link">
+                        <i class="fa-regular fa-globe"></i>
+                        <span class="nav-text">Español</span>
+                    </a>
+                </div>
             </div>
         </aside>
 
         <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
         <main class="main-content">
             <header class="top-bar">
-                <div class="navigation-buttons">
-                    <button class="nav-arrow" id="back-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                    <button class="nav-arrow" id="forward-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                </div>
-                <div class="user-menu">
-                    <button class="user-btn">
-                        <i class="fa-regular fa-user"></i>
-                        <span>Usuario</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
+                <!-- Buscador centrado -->
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="¿Qué quieres reproducir?">
                 </div>
             </header>
             
@@ -91,32 +90,22 @@
                     <h1 id="section-title">Buenas tardes</h1>
                 </div>
                 
-                <!-- Contenedor de tarjetas -->
+                <!-- Contenedor de tarjetas de canciones -->
                 <div class="card-container" id="card-container"></div>
                 
-                <!-- Biblioteca (vista expandida) -->
-                <div class="library-container" id="library-container" style="display: none;">
-                    <div class="library-header">
-                        <h2><i class="fa-solid fa-book"></i> Tu Biblioteca</h2>
-                        <button id="close-library" class="close-library-btn">
-                            <i class="fa-solid fa-xmark"></i>
+                <!-- Vista de Biblioteca (Playlists y Álbumes) -->
+                <div class="library-view" id="library-view" style="display: none;">
+                    <div class="library-view-header">
+                        <button class="back-to-home-btn" id="back-to-home-btn">
+                            <i class="fa-solid fa-arrow-left"></i> Volver
                         </button>
+                        <h2 id="library-view-title">Tu Biblioteca</h2>
                     </div>
-                    
-                    <div class="library-tabs">
-                        <button class="lib-tab active">Playlists</button>
-                        <button class="lib-tab">Artistas</button>
-                        <button class="lib-tab">Álbumes</button>
+                    <div class="library-tabs" id="library-tabs">
+                        <button class="lib-tab active" data-tab="playlists">Playlists</button>
+                        <button class="lib-tab" data-tab="albums">Álbumes</button>
                     </div>
-                    
-                    <div class="library-grid">
-                        <div class="library-section" id="playlists-section">
-                            <div class="library-list" id="playlists-list"></div>
-                        </div>
-                        <div class="library-section" id="artists-section" style="display: none;">
-                            <div class="library-list" id="artists-list"></div>
-                        </div>
-                    </div>
+                    <div class="library-grid-view" id="library-grid-container"></div>
                 </div>
                 
                 <!-- Mensaje sin resultados -->
@@ -154,9 +143,11 @@
             
             <div class="queue-preview">
                 <p class="queue-title"><i class="fa-solid fa-list-ul"></i> Cola de reproducción</p>
-                <div id="queue-status" class="queue-empty">
-                    <i class="fa-regular fa-music"></i>
-                    <span>No hay canciones en cola</span>
+                <div id="queue-list" class="queue-list">
+                    <div class="queue-empty">
+                        <i class="fa-regular fa-music"></i>
+                        <span>No hay canciones en cola</span>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -209,117 +200,20 @@
         </footer>
     </div>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Clone</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <div class="container">
-
-        <aside class="sidebar">
-            <div class="logo">
-                <h2>Spotify</h2>
+    <!-- Modal para crear playlist -->
+    <div class="modal-overlay" id="playlistModal">
+        <div class="modal-container">
+            <h2><i class="fa-solid fa-plus-circle"></i> Crear playlist</h2>
+            <p>Dale un nombre a tu nueva playlist</p>
+            <input type="text" class="modal-input" id="playlistNameInput" placeholder="Ej: Mis favoritos, Rock 2024..." autocomplete="off">
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="cancelModalBtn">Cancelar</button>
+                <button class="modal-btn modal-btn-create" id="confirmCreateBtn">Crear</button>
             </div>
-
-            <nav class="menu">
-                <ul>
-                    <li class="active">Inicio</li>
-                    <li>Buscar</li>
-                    <li>Tu Biblioteca</li>
-                </ul>
-            </nav>
-
-            <div class="playlist">
-                <h4>Playlists</h4>
-                <ul>
-                    <li>Mis Favoritos</li>
-                    <li>Top 2026</li>
-                    <li>Relax</li>
-                </ul>
-            </div>
-        </aside>
-
-        <main class="main">
-
-            <header class="header">
-                <input type="text" placeholder="Buscar música..." class="search">
-                <div class="user">
-                    <span>Usuario</span>
-                </div>
-            </header>
-
-            <section class="section">
-                <h2>Recomendado</h2>
-
-                <div class="cards-container">
-                    <div class="card">
-                        <img src="assets/img/Juanes.jpg" alt="Album">
-                        <h3>Juanes</h3>
-                        <p>Descripción corta</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="assets/img/Grupo5.jpg" alt="Album">
-                        <h3>Grupo 5</h3>
-                        <p>Descripción corta</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Tus canciones</h2>
-                <div class="songs-list">
-                    <div class="song-card">
-                        <img src="assets/img/song1.jpg" alt="Song">
-                        <div class="song-info">
-                            <h4>Cancion 1</h4>
-                            <p>Artista</p>
-                        </div>
-                        <button class="play-btn">▶</button>
-                    </div>
-
-                    <div class="song-card">
-                        <img src="assets/img/song2.jpg" alt="Song">
-                        <div class="song-info">
-                            <h4>Canción 2</h4>
-                            <p>Artista</p>
-                        </div>
-                        <button class="play-btn">▶</button>
-                    </div>
-                    
-                </div>
-            </section>
-        </main>
+        </div>
     </div>
 
-    <footer class="player">
-
-        <div class="player-left">
-            <img src="assets/img/song1.jpg" alt="Now Playing">
-            <div>
-                <h4>Nombre canción</h4>
-                <p>Artista</p>
-            </div>
-        </div>
-
-        <div class="player-center">
-            <button class="control-btn">⏮</button>
-            <button class="control-btn play">▶</button>
-            <button class="control-btn">⏭</button>
-
-            <input type="range" class="progress-bar">
-        </div>
-
-        <div class="player-right">
-            <span>🔊</span>
-            <input type="range" class="volume">
-        </div>
-
-    </footer>
-
+    <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
