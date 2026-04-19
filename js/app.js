@@ -347,6 +347,21 @@ function init() {
   loadGenres(); // Precargar géneros
 }
 
+/** Índice en el arreglo global `songs` (la cuadrícula puede ser un subconjunto: búsqueda, artista, etc.). */
+function getMasterSongIndexFromCard(cardEl) {
+  if (!cardEl) return -1;
+  const id = cardEl.dataset.songId;
+  if (id !== undefined && id !== "") {
+    const idx = songs.findIndex((s) => String(s.id) === String(id));
+    if (idx !== -1) return idx;
+  }
+  const local = parseInt(cardEl.dataset.index, 10);
+  if (!Number.isNaN(local) && local >= 0 && local < songs.length) {
+    return local;
+  }
+  return -1;
+}
+
 function loadSongsToCard(songsToShow) {
   if (!cardContainer) return;
 
@@ -376,24 +391,24 @@ function loadSongsToCard(songsToShow) {
     )
     .join("");
 
-  // Agregar event listeners a los botones de reproducción
   document.querySelectorAll(".play-btn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      const index = parseInt(btn.dataset.index);
-      playSongAtIndex(index);
+      const idx = getMasterSongIndexFromCard(btn.closest(".card"));
+      if (idx >= 0) playSongAtIndex(idx);
     });
   });
 
   document.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("click", () => {
-      const index = parseInt(card.dataset.index);
-      playSongAtIndex(index);
+      const idx = getMasterSongIndexFromCard(card);
+      if (idx >= 0) playSongAtIndex(idx);
     });
   });
 }
 
 function playSongAtIndex(index) {
+  if (index < 0 || index >= songs.length) return;
   currentSongIndex = index;
   loadSong(songs[currentSongIndex]);
   playSong();
