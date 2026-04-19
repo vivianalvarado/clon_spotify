@@ -13,7 +13,7 @@
     --border-color: #282828;
     --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --sidebar-width-collapsed: 72px;
-    --sidebar-width-expanded: 240px;
+    --sidebar-width-expanded: 260px;
 }
 
 /* Reset y Layout Principal */
@@ -24,8 +24,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'CircularStd', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-black);
     color: var(--text-main);
@@ -44,7 +42,12 @@ body {
     padding: 8px;
 }
 
-/* ==================== SIDEBAR EXPANDIBLE ==================== */
+/* SIDEBAR EXPANDIDO POR HOVER */
+.app-container:has(.sidebar:hover) {
+    grid-template-columns: var(--sidebar-width-expanded) 1fr 300px;
+}
+
+/* SIDEBAR CON HOVER */
 .sidebar {
     background-color: var(--bg-dark);
     border-radius: 12px;
@@ -109,6 +112,7 @@ body {
 
 .sidebar:hover .logo-text {
     opacity: 1;
+    max-width: 200px;
 }
 
 /* Navegación principal */
@@ -132,7 +136,8 @@ body {
     color: var(--text-sec);
     text-decoration: none;
     transition: var(--transition-default);
-    white-space: nowrap;
+    border-radius: 8px;
+    margin-bottom: 4px;
 }
 
 .nav-section li a i {
@@ -148,6 +153,7 @@ body {
 
 .sidebar:hover .nav-text {
     opacity: 1;
+    max-width: 200px;
 }
 
 .nav-section li a:hover,
@@ -281,7 +287,8 @@ body {
     border-radius: 8px;
     cursor: pointer;
     transition: var(--transition-default);
-    white-space: nowrap;
+    color: var(--text-sec);
+    min-height: 40px;
 }
 
 .preview-item i {
@@ -304,6 +311,7 @@ body {
 
 .preview-item:hover {
     background: var(--bg-hover);
+    color: var(--text-main);
 }
 
 .delete-playlist-btn {
@@ -343,7 +351,7 @@ body {
     text-decoration: none;
     border-radius: 8px;
     transition: var(--transition-default);
-    white-space: nowrap;
+    min-height: 40px;
 }
 
 .footer-link i {
@@ -526,6 +534,7 @@ body {
 .search-container i {
     color: var(--text-sec);
     font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
 #search-input {
@@ -744,6 +753,7 @@ body {
     gap: 16px;
     margin-bottom: 24px;
     border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
 }
 
 .lib-tab {
@@ -754,6 +764,7 @@ body {
     cursor: pointer;
     transition: var(--transition-default);
     position: relative;
+    white-space: nowrap;
 }
 
 .lib-tab.active {
@@ -829,6 +840,9 @@ body {
 .library-grid-item p {
     font-size: 0.75rem;
     color: var(--text-sec);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Right Panel */
@@ -838,6 +852,7 @@ body {
     border-radius: 12px;
     padding: 24px 20px;
     overflow-y: auto;
+    min-width: 0;
 }
 
 .right-panel::-webkit-scrollbar {
@@ -916,12 +931,18 @@ body {
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .track-details p {
     font-size: 0.8rem;
     color: var(--text-sec);
     margin-bottom: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .track-actions {
@@ -1020,7 +1041,7 @@ body {
 
 /* Player Bar */
 .player-bar {
-    grid-column: span 3;
+    grid-column: 1 / -1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1028,6 +1049,7 @@ body {
     background-color: var(--bg-black);
     border-top: 1px solid var(--border-color);
     gap: 20px;
+    min-height: 90px;
 }
 
 .current-track-info {
@@ -1035,6 +1057,7 @@ body {
     align-items: center;
     gap: 14px;
     min-width: 180px;
+    flex: 1;
 }
 
 .current-track-info img {
@@ -1042,17 +1065,28 @@ body {
     height: 56px;
     border-radius: 6px;
     object-fit: cover;
+    flex-shrink: 0;
+}
+
+.track-meta {
+    min-width: 0;
 }
 
 .track-meta h5 {
     font-size: 0.9rem;
     font-weight: 600;
     margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .track-meta p {
     font-size: 0.75rem;
     color: var(--text-sec);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mini-like {
@@ -1063,6 +1097,7 @@ body {
     font-size: 1rem;
     transition: var(--transition-default);
     padding: 8px;
+    flex-shrink: 0;
 }
 
 .mini-like:hover {
@@ -1075,7 +1110,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    flex: 1;
+    flex: 2;
     max-width: 600px;
 }
 
@@ -1125,6 +1160,8 @@ body {
     font-size: 0.7rem;
     color: var(--text-sec);
     min-width: 35px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .progress-bar-container {
@@ -1174,6 +1211,7 @@ body {
     align-items: center;
     gap: 16px;
     min-width: 180px;
+    flex: 1;
     justify-content: flex-end;
 }
 
@@ -1185,6 +1223,7 @@ body {
     font-size: 1rem;
     transition: var(--transition-default);
     padding: 6px;
+    flex-shrink: 0;
 }
 
 .extra-btn:hover {
@@ -1381,8 +1420,16 @@ body {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    :root {
+        --sidebar-width-expanded: 220px;
+    }
+    
     .app-container {
         grid-template-columns: auto 1fr 280px;
+    }
+    
+    .app-container:has(.sidebar:hover) {
+        grid-template-columns: var(--sidebar-width-expanded) 1fr 260px;
     }
     
     .card-container {
@@ -1394,6 +1441,10 @@ body {
 @media (max-width: 768px) {
     .app-container {
         grid-template-columns: auto 1fr;
+    }
+    
+    .app-container:has(.sidebar:hover) {
+        grid-template-columns: var(--sidebar-width-expanded) 1fr;
     }
     
     .right-panel {
@@ -1409,6 +1460,7 @@ body {
     
     .current-track-info {
         min-width: 140px;
+        flex: 1 1 100%;
     }
     
     .player-extras {
@@ -1435,6 +1487,36 @@ body {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --sidebar-width-collapsed: 0px;
+    }
+    
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 100;
+        transform: translateX(-100%);
+        width: 280px;
+        min-width: 280px;
+    }
+    
+    .sidebar:hover {
+        transform: translateX(0);
+        min-width: 280px;
+    }
+    
+    .app-container {
+        grid-template-columns: 0px 1fr;
+        gap: 0;
+        padding: 0;
+    }
+    
+    .main-content {
+        border-radius: 0;
+    }
+    
     .current-track-info img {
         width: 40px;
         height: 40px;
@@ -1454,6 +1536,15 @@ body {
     
     .greeting-section h1 {
         font-size: 1.5rem;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .card {
+        padding: 12px;
     }
 }
 
