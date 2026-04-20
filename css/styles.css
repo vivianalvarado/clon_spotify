@@ -43,12 +43,12 @@ body {
     transition: grid-template-columns 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* SIDEBAR EXPANDIDO POR HOVER */
-.app-container:has(.sidebar:hover) {
+/* SIDEBAR EXPANDIDO POR CLASE */
+.app-container:has(.sidebar.expanded) {
     grid-template-columns: var(--sidebar-width-expanded) 1fr 300px;
 }
 
-/* SIDEBAR CON HOVER */
+/* SIDEBAR */
 .sidebar {
     background-color: var(--bg-dark);
     border-radius: 8px;
@@ -63,7 +63,7 @@ body {
     z-index: 10;
 }
 
-.sidebar:hover {
+.sidebar.expanded {
     min-width: var(--sidebar-width-expanded);
 }
 
@@ -80,9 +80,50 @@ body {
     border-radius: 4px;
 }
 
-/* Ocultar el botón de toggle - ya no se necesita */
 .sidebar-toggle {
     display: none;
+}
+
+/* Fila del botón toggle — siempre visible debajo del logo */
+.sidebar-toggle-row {
+    display: flex;
+    justify-content: center;
+    padding: 0 8px 8px;
+}
+
+.sidebar.expanded .sidebar-toggle-row {
+    justify-content: flex-end;
+}
+
+/* Botón toggle del sidebar */
+.sidebar-toggle-btn {
+    background: var(--bg-elevated);
+    border: none;
+    color: var(--text-sec);
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 6px;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-toggle-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text-main);
+}
+
+.sidebar.expanded #sidebar-toggle-icon {
+    transform: rotate(180deg);
+}
+
+#sidebar-toggle-icon {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Logo */
@@ -105,7 +146,7 @@ body {
     white-space: nowrap;
 }
 
-.sidebar:hover .logo-text {
+.sidebar.expanded .logo-text {
     opacity: 1;
     max-width: 200px;
 }
@@ -149,7 +190,7 @@ body {
     font-size: 0.9rem;
 }
 
-.sidebar:hover .nav-text {
+.sidebar.expanded .nav-text {
     opacity: 1;
     max-width: 200px;
 }
@@ -208,13 +249,13 @@ body {
 }
 
 /* Ocultar texto del botón crear cuando sidebar no está en hover */
-.sidebar:not(:hover) .create-btn-top span {
+.sidebar:not(.expanded) .create-btn-top span {
     opacity: 0;
     max-width: 0;
     overflow: hidden;
 }
 
-.sidebar:hover .create-btn-top span {
+.sidebar.expanded .create-btn-top span {
     opacity: 1;
     max-width: 200px;
     transition: opacity 0.25s ease, max-width 0.3s ease;
@@ -257,13 +298,13 @@ body {
 }
 
 /* Ocultar texto de biblioteca cuando sidebar no está en hover */
-.sidebar:not(:hover) .library-btn span {
+.sidebar:not(.expanded) .library-btn span {
     opacity: 0;
     max-width: 0;
     overflow: hidden;
 }
 
-.sidebar:hover .library-btn span {
+.sidebar.expanded .library-btn span {
     opacity: 1;
     max-width: 200px;
     transition: opacity 0.25s ease 0.05s, max-width 0.3s ease;
@@ -309,7 +350,7 @@ body {
     font-size: 0.9rem;
 }
 
-.sidebar:hover .preview-item span {
+.sidebar.expanded .preview-item span {
     opacity: 1;
     max-width: 200px;
 }
@@ -377,7 +418,7 @@ body {
     transition: opacity 0.25s ease 0.1s, max-width 0.3s ease;
 }
 
-.sidebar:hover .language-switcher__label {
+.sidebar.expanded .language-switcher__label {
     opacity: 1;
     max-width: 200px;
 }
@@ -392,7 +433,7 @@ body {
     flex-shrink: 0;
 }
 
-.sidebar:hover .language-switcher__chevron {
+.sidebar.expanded .language-switcher__chevron {
     opacity: 1;
     max-width: 24px;
 }
@@ -1618,7 +1659,7 @@ body {
         grid-template-columns: var(--sidebar-width-collapsed) 1fr 260px;
     }
     
-    .app-container:has(.sidebar:hover) {
+    .app-container:has(.sidebar.expanded) {
         grid-template-columns: var(--sidebar-width-expanded) 1fr 260px;
     }
     
@@ -1637,7 +1678,7 @@ body {
         grid-template-columns: var(--sidebar-width-collapsed) 1fr;
     }
     
-    .app-container:has(.sidebar:hover) {
+    .app-container:has(.sidebar.expanded) {
         grid-template-columns: var(--sidebar-width-expanded) 1fr;
     }
     
@@ -1734,7 +1775,7 @@ body {
         min-width: 280px;
     }
     
-    .sidebar:hover {
+    .sidebar.expanded {
         transform: translateX(0);
         min-width: 280px;
     }
@@ -1795,7 +1836,7 @@ body {
     z-index: 10;
 }
 
-.sidebar:hover {
+.sidebar.expanded {
     min-width: var(--sidebar-width-expanded);
 }
 
@@ -1837,7 +1878,7 @@ body {
     white-space: nowrap;
 }
 
-.sidebar:hover .logo-text {
+.sidebar.expanded .logo-text {
     opacity: 1;
     max-width: 200px;
 }
@@ -1881,7 +1922,7 @@ body {
     font-size: 0.9rem;
 }
 
-.sidebar:hover .nav-text {
+.sidebar.expanded .nav-text {
     opacity: 1;
     max-width: 200px;
 }
@@ -1940,13 +1981,13 @@ body {
 }
 
 /* Ocultar texto del botón crear cuando sidebar no está en hover */
-.sidebar:not(:hover) .create-btn-top span {
+.sidebar:not(.expanded) .create-btn-top span {
     opacity: 0;
     max-width: 0;
     overflow: hidden;
 }
 
-.sidebar:hover .create-btn-top span {
+.sidebar.expanded .create-btn-top span {
     opacity: 1;
     max-width: 200px;
     transition: opacity 0.25s ease, max-width 0.3s ease;
@@ -1989,13 +2030,13 @@ body {
 }
 
 /* Ocultar texto de biblioteca cuando sidebar no está en hover */
-.sidebar:not(:hover) .library-btn span {
+.sidebar:not(.expanded) .library-btn span {
     opacity: 0;
     max-width: 0;
     overflow: hidden;
 }
 
-.sidebar:hover .library-btn span {
+.sidebar.expanded .library-btn span {
     opacity: 1;
     max-width: 200px;
     transition: opacity 0.25s ease 0.05s, max-width 0.3s ease;
@@ -2041,7 +2082,7 @@ body {
     font-size: 0.9rem;
 }
 
-.sidebar:hover .preview-item span {
+.sidebar.expanded .preview-item span {
     opacity: 1;
     max-width: 200px;
 }
@@ -2086,7 +2127,7 @@ body {
     font-size: 0.9rem;
 }
 
-.sidebar:hover .footer-link span {
+.sidebar.expanded .footer-link span {
     opacity: 1;
     max-width: 200px;
 }
@@ -3017,7 +3058,7 @@ body {
         grid-template-columns: var(--sidebar-width-collapsed) 1fr 260px;
     }
     
-    .app-container:has(.sidebar:hover) {
+    .app-container:has(.sidebar.expanded) {
         grid-template-columns: var(--sidebar-width-expanded) 1fr 260px;
     }
     
@@ -3036,7 +3077,7 @@ body {
         grid-template-columns: var(--sidebar-width-collapsed) 1fr;
     }
     
-    .app-container:has(.sidebar:hover) {
+    .app-container:has(.sidebar.expanded) {
         grid-template-columns: var(--sidebar-width-expanded) 1fr;
     }
     
@@ -3117,7 +3158,7 @@ body {
         min-width: 280px;
     }
     
-    .sidebar:hover {
+    .sidebar.expanded {
         transform: translateX(0);
         min-width: 280px;
     }
@@ -3160,5 +3201,102 @@ body {
     
     .card {
         padding: 12px;
+    }
+}
+
+/* ================================================================
+   SECCIÓN RESPONSIVA (Solo ajustes de pantalla)
+   ================================================================ */
+
+/* TABLETS: Ocultamos el panel derecho (Right Panel) */
+@media (max-width: 1024px) {
+    .app-container {
+        /* Mantenemos tus variables, pero eliminamos la tercera columna de 300px */
+        grid-template-columns: var(--sidebar-width-collapsed) 1fr;
+    }
+    
+    .app-container:has(.sidebar.expanded) {
+        grid-template-columns: var(--sidebar-width-expanded) 1fr;
+    }
+    
+    .right-panel {
+        display: none !important;
+    }
+}
+
+/* MÓVILES: Sidebar y Top Bar */
+@media (max-width: 768px) {
+    .app-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        padding: 0;
+        gap: 0;
+    }
+
+    /* El sidebar pasa a ser un overlay para no romper el layout del main */
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 90px;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        border-radius: 0;
+    }
+
+    .sidebar.expanded {
+        transform: translateX(0);
+        width: 280px;
+    }
+
+    /* Ajuste de tu Top Bar (flex/grid) */
+    .top-bar {
+        grid-template-columns: 1fr auto;
+        padding: 10px 16px;
+    }
+
+    .top-bar-spacer {
+        display: none;
+    }
+
+    .search-box {
+        max-width: none;
+        width: 100%;
+    }
+
+    /* Grid de tarjetas más compacto */
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+
+    /* Player Bar: Ocultamos extras (volumen) para que quepan los controles */
+    .player-extras {
+        display: none;
+    }
+    
+    .current-track-info {
+        min-width: auto;
+    }
+}
+
+/* SMARTPHONES PEQUEÑOS */
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr; /* Siempre 2 columnas */
+    }
+
+    .greeting-section h1 {
+        font-size: 1.4rem;
+    }
+
+    /* Reducimos el tamaño de la miniatura en el footer */
+    .current-track-info img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .track-meta h5 {
+        font-size: 0.8rem;
     }
 }

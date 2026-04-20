@@ -58,7 +58,6 @@ const greetingSection = document.getElementById('greeting-section');
 // Datos de géneros musicales
 const genres = [
     { name: 'Música', color: 'genre-pop', image: 'IMG/generos/musica.jpg' },
-    { name: 'Podcasts', color: 'genre-urbano', image: 'IMG/generos/podcasts.jpg' },
     { name: 'Eventos en vivo', color: 'genre-latina', image: 'IMG/generos/eventos.jpg' },
     { name: 'Creado para ti', color: 'genre-rock', image: 'IMG/generos/parati.jpg' },
     { name: 'Nuevos lanzamientos', color: 'genre-indie', image: 'IMG/generos/nuevos.jpg' },
@@ -68,9 +67,7 @@ const genres = [
     { name: 'Cumbia', color: 'genre-cumbia', image: 'IMG/generos/cumbia.jpg' },
     { name: 'Rankings', color: 'genre-reggaeton', image: 'IMG/generos/rankings.jpg' },
     { name: 'Ranking de podcasts', color: 'genre-urbano', image: 'IMG/generos/rankingpodcasts.jpg' },
-    { name: 'Educación', color: 'genre-ballads', image: 'IMG/generos/educacion.jpg' },
     { name: 'Documentales', color: 'genre-metal', image: 'IMG/generos/documentales.jpg' },
-    { name: 'Comedia', color: 'genre-salsa', image: 'IMG/generos/comedia.jpg' },
     { name: 'Salsa', color: 'genre-salsa', image: 'IMG/generos/salsa.jpg' },
     { name: 'Dance/Electrónica', color: 'genre-electronic', image: 'IMG/generos/dance.jpg' },
     { name: 'Rock', color: 'genre-rock', image: 'IMG/generos/rock.jpg' },
@@ -835,6 +832,50 @@ function updateVolumeIcon() {
   else if (vol < 0.5) volumeIcon.className = "fa-solid fa-volume-low";
   else volumeIcon.className = "fa-solid fa-volume-high";
 }
+
+// Botón toggle del sidebar
+const sidebarEl = document.getElementById('sidebar');
+const sidebarToggleBtn = document.getElementById('sidebar-toggle-btn');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+function toggleSidebar() {
+  sidebarEl.classList.toggle('expanded');
+}
+
+function closeSidebar() {
+  sidebarEl.classList.remove('expanded');
+}
+
+// Botón toggle principal (dentro del sidebar)
+if (sidebarToggleBtn && sidebarEl) {
+  sidebarToggleBtn.addEventListener('click', toggleSidebar);
+}
+
+// Overlay (clic fuera cierra el sidebar en móvil)
+if (sidebarOverlay) {
+  sidebarOverlay.addEventListener('click', closeSidebar);
+}
+
+// Botón hamburger en top bar (visible solo en <480px)
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', toggleSidebar);
+}
+
+// Mostrar/ocultar botón hamburger según tamaño
+function handleMobileMenu() {
+  if (!mobileMenuBtn) return;
+  if (window.innerWidth <= 480) {
+    mobileMenuBtn.style.display = 'flex';
+  } else {
+    mobileMenuBtn.style.display = 'none';
+    // Cerrar drawer si se amplía la pantalla
+    if (window.innerWidth > 480) closeSidebar();
+  }
+}
+
+handleMobileMenu();
+window.addEventListener('resize', handleMobileMenu);
 
 // Iniciar aplicación
 init();
