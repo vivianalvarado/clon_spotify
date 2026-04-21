@@ -5,7 +5,7 @@ const songs = [
     {
         id: 1,
         title: 'Amándote',
-        artist: 'Ricardo Arjona',
+        artist: 'Anna Carina',
         cover: 'IMG/amandote.jpg',
         audio: 'audio/amandote.mp3',
         favorite: false
@@ -37,7 +37,7 @@ const songs = [
     {
         id: 5,
         title: 'Consejos de Amor',
-        artist: 'Morat',
+        artist: 'Morat, Tini',
         cover: 'IMG/consejosdeamor.jpg',
         audio: 'audio/consejosdeamor.mp3',
         favorite: false
@@ -101,7 +101,7 @@ const songs = [
     {
         id: 13,
         title: 'La Correcta',
-        artist: 'Karol G',
+        artist: 'Morat y Nabález',
         cover: 'IMG/lacorrecta.jpg',
         audio: 'audio/lacorrecta.mp3',
         favorite: false
@@ -125,7 +125,7 @@ const songs = [
     {
         id: 16,
         title: 'MANTRA',
-        artist: 'K/DA',
+        artist: 'JENNIE',
         cover: 'IMG/mantra.jpg',
         audio: 'audio/mantra.mp3',
         favorite: false
@@ -133,7 +133,7 @@ const songs = [
     {
         id: 17,
         title: 'Mi Buen Amor',
-        artist: 'Morat',
+        artist: 'MON Laferte',
         cover: 'IMG/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
         favorite: false
@@ -165,7 +165,7 @@ const songs = [
     {
         id: 21,
         title: 'Rockstar',
-        artist: 'Post Malone',
+        artist: 'Lisa',
         cover: 'IMG/rockstar.jpg',
         audio: 'audio/rockstar.mp3',
         favorite: false
@@ -205,9 +205,355 @@ const songs = [
     {
         id: 26,
         title: 'Vas a Querer Volver',
-        artist: 'Morat',
+        artist: 'Maite Perroni',
         cover: 'IMG/vasaquerervolver.jpg',
         audio: 'audio/vasaquerervolver.mp3',
         favorite: false
-    }
+    },
+    {
+        id: 27,
+        title: 'No se Va',
+        artist: 'Morat',
+        cover: 'IMG/noseva.jpg',
+        audio: 'audio/noseva.mp3',
+        favorite: false
+    },
+    {
+        id: 28,
+        title: 'TQG',
+        artist: 'Karol G, Shakira',
+        cover: 'IMG/tqg.jpg',
+        audio: 'audio/tqg.mp3',
+        favorite: false
+    },
+    {
+        id: 29,
+        title: 'Paloma Ajena',
+        artist: 'Agua Marina',
+        cover: 'IMG/palomajena.jpg',
+        audio: 'audio/palomajena.mp3',
+        favorite: false
+    },
+    {
+        id: 30,
+        title: 'Tu Boda y Yo',
+        artist: 'Corazon Serrano',
+        cover: 'IMG/tubodayyo.jpg',
+        audio: 'audio/tubodayyo.mp3',
+        favorite: false
+    },
+    {
+        id: 31,
+        title: 'Sejodioto',
+        artist: 'Karol G',
+        cover: 'IMG/sejodioto.jpg',
+        audio: 'audio/sejodioto.mp3',
+        favorite: false
+    },
+    {
+        id: 32,
+        title: 'Pineapple',
+        artist: 'Karol G, Becky G',
+        cover: 'IMG/pineapple.jpg',
+        audio: 'audio/pineapple.mp3',
+        favorite: false
+
+    },
+    {
+        id: 33,
+        title: 'El Makinon',
+        artist: 'Karol G',
+        cover: 'IMG/makinon.jpg',
+        audio: 'audio/makinon.mp3',
+        favorite: false
+    },
+    { id: 34,
+        title: 'Provenza',
+        artist: 'Karol G',
+        cover: 'IMG/provenza.jpg',
+        audio: 'audio/provenza.mp3',
+        favorite: false
+    },
+    { id: 35,
+        title: 'Mi Cama',
+        artist: 'Karol G',
+        cover: 'IMG/micama.jpg',
+        audio: 'audio/micama.mp3',
+        favorite: false
+    },
+    { id: 36,
+        title: 'Gatúbela',
+        artist: 'Karol G, Maldy',
+        cover: 'IMG/gatubela.jpg',
+        audio: 'audio/gatubela.mp3',
+        favorite: false
+    },
+    { id: 37,
+        title: 'Ahora Me Llama',
+        artist: 'Karol G, Bad Bunny',
+        cover: 'IMG/ahoramellama.jpg',
+        audio: 'audio/ahoramellama.mp3',
+        favorite: false
+    },
+    { id: 38,
+        title: 'Mamii',
+        artist: 'Karol G, Becky G',
+        cover: 'IMG/mamii.jpg',
+        audio: 'audio/mamii.mp3',
+        favorite: false
+    },
+    { id: 39,
+        title: 'Si Antes Te Hubiera Conocido',
+        artist: 'Karol G',
+        cover: 'IMG/si.jpg',
+        audio: 'audio/si.mp3',
+        favorite: false
+    },
+    { id: 40,
+        title: ' Mix Amargura',
+        artist: 'Karol G',
+        cover: 'IMG/mixamargura.jpg',
+        audio: 'audio/mixamargura.mp3',
+        favorite: false
+    },
+    {
+        id: 41,
+        title: 'Amargura',
+        artist: 'Karol G',
+        cover: 'IMG/mixamargura.jpg',
+        audio: 'audio/amargura.mp3',
+        favorite: false
+
+    },
+    {
+        id: 42,
+        title: 'MI EX TENÍA RAZÓN',
+        artist: 'Karol G',
+        cover: 'IMG/miex.jpg',
+        audio: 'audio/miex.mp3',
+        favorite: false
+    },
+    {
+        id: 43,
+        title: 'Culpables',
+        artist: 'Karol G, Anuel AA',
+        cover: 'IMG/culpables.jpg',
+        audio: 'audio/culpables.mp3',
+        favorite: false
+
+    },
+    {
+        id: 44,
+        title: 'El Barco',
+        artist: 'Karol G',
+        cover: 'IMG/elbarco.jpg',
+        audio: 'audio/elbarco.mp3',
+        favorite: false
+    },
+    {
+        id: 45,
+        title: 'Créeme',
+        artist: 'Karol G, Maluma',
+        cover: 'IMG/creeme.jpg',
+        audio: 'audio/creeme.mp3',
+        favorite: false
+    },
+    {
+        id: 46,
+        title: 'Ocean',
+        artist: 'Karol G',
+        cover: 'IMG/ocean.jpg',
+        audio: 'audio/ocean.mp3',
+        favorite: false
+
+    },
+    {
+        id: 47,
+        title: 'Punto G',
+        artist: 'Karol G',
+        cover: 'IMG/puntog.jpg',
+        audio: 'audio/puntog.mp3',
+        favorite: false
+    },
+    {
+        id: 48,
+        title: 'Tusa',
+        artist: 'Karol G, Nicki Minaj',
+        cover: 'IMG/tusa.jpg',
+        audio: 'audio/tusa.mp3',
+        favorite: false
+    },
+    {
+        id: 49,
+        title: 'Secreto ',
+        artist: 'Anuel AA, KAROL G',
+        cover: 'IMG/secreto.jpg',
+        audio: 'audio/secreto.mp3',
+        favorite: false
+    },
+    {
+        id: 50,
+        title: 'A Ella',
+        artist: 'Karol G',
+        cover: 'IMG/aella.jpg',
+        audio: 'audio/aella.mp3',
+        favorite: false
+    },
+    {
+        id: 51,
+        title: 'Poblado',
+        artist: 'J.Balvin, Karol G, Nicky Jam, Crissin, Totoy El Frio, Natan & Shander',
+        cover: 'IMG/poblado.jpg',
+        audio: 'audio/poblado.mp3',
+        favorite: false
+    },
+    {
+        id: 52,
+        title: 'Cairo',
+        artist: 'Karol G, Ovy On The Drums',
+        cover: 'IMG/cairo.jpg',
+        audio: 'audio/cairo.mp3',
+        favorite: false
+
+    },
+    {
+        id: 53,
+        title: 'Location',
+        artist: 'Karol G, Anuel AA, J Balvin',
+        cover: 'IMG/location.jpg',
+        audio: 'audio/location.mp3',
+        favorite: false
+    },
+    {
+        id: 54,
+        title: 'X Si Volvemos ',
+        artist: 'Karol G, Romeo Santos',
+        cover: 'IMG/xsi.jpg',
+        audio: 'audio/xsi.mp3',
+        favorite: false
+    },
+    {
+        id: 55,
+        title: 'Pero tu',
+        artist: 'Karol G x Quevedo',
+        cover: 'IMG/perotu.jpg',
+        audio: 'audio/perotu.mp3',
+        favorite: false ,
+
+    },
+    {
+        id: 56,
+        title: 'China ',
+        artist: 'Anuel AA, Karol G, J. Balvin, Daddy Yankee, Ozuna',
+        cover: 'IMG/china.jpg',
+        audio: 'audio/china.mp3',
+        favorite: false
+    },
+    {
+        id: 57,
+        title: 'GUCCI LOS PAÑOS',
+        artist: 'Karol G',
+        cover: 'IMG/gucci.jpg',
+        audio: 'audio/gucci.mp3',
+        favorite: false
+    },
+    {
+        id: 58,
+        title: 'Mientras Me Curo Del Cora',
+        artist: 'Karol G',
+        cover: 'IMG/mientras.jpg',
+        audio: 'audio/mientras.mp3',
+        favorite: false
+    },
+    {
+        id: 59,
+        title: 'S91',
+        artist: 'Karol G',
+        cover: 'IMG/s91.jpg',
+        audio: 'audio/s91.mp3',
+        favorite: false
+    },
+    {
+        id: 60,
+        title: 'Contigo',
+        artist: 'Karol G,Tiësto ',
+        cover: 'IMG/contigo.jpg',
+        audio: 'audio/contigo.mp3',
+        favorite: false
+    },
+    {
+        id: 61,
+        title: 'Tá OK',
+        artist: 'DENNIS, MC Kevin o Chris, Maluma, Karol G',
+        cover: 'IMG/taok.jpg',
+        audio: 'audio/taok.mp3',
+        favorite: false
+    },
+    {
+        id: 62,
+        title: '200 Copas',
+        artist: 'Karol G,',
+        cover: 'IMG/200copas.jpg',
+        audio: 'audio/200copas.mp3',
+        favorite: false
+    },
+    {
+        id: 63,
+        title: 'Qlona',
+        artist: 'Karol G',
+        cover: 'IMG/qlona.jpg',
+        audio: 'audio/qlona.mp3',
+        favorite: false
+
+    },
+    {
+        id: 64,
+        title: 'OKI DOKI',
+        artist: 'Karol G',
+        cover: 'IMG/okidoki.jpg',
+        audio: 'audio/okidoki.mp3',
+        favorite: false
+    },
+    {
+        id: 65,
+        title:'Money',
+        artist:'Lisa',
+        cover: 'IMG/money.jpg',
+        audio: 'audio/money.mp3',
+        favorite: false
+    },
+    {
+        id: 66,
+        title:'MOONLIT FLOOR',
+        artist:'Lisa',
+        cover: 'IMG/kiss.jpg',
+        audio: 'audio/kiss.mp3',
+        favorite: false
+    },
+    {
+        id: 67,
+        title:'FXCK UP THE WORLD',
+        artist:'Lisa',
+        cover: 'IMG/up.jpg',
+        audio: 'audio/up.mp3',
+        favorite: false
+
+    },
+    {
+        id: 68,
+        title:'New Woman',
+        artist:'Lisa feat. Rosalía',
+        cover: 'IMG/new.jpg',
+        audio: 'audio/new.mp3',
+        favorite: false
+    },
+    {
+        id: 69,
+        title:'Rapunzel',
+        artist:'Lisa',
+        cover: 'IMG/rapunzel.jpg',
+        audio: 'audio/rapunzel.mp3',
+        favorite: false
+    },
+
 ];

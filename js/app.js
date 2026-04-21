@@ -11,6 +11,8 @@ const t = (key, vars) =>
   window.AppI18n ? window.AppI18n.t(key, vars) : key;
 
 // Elementos DOM
+const btnCrearPlaylist = document.getElementById("create-playlist-btn");
+const ListaPlayerPrevierw = document.querySelector('.library-playlist-preview');
 const cardContainer = document.getElementById("card-container");
 const searchInput = document.getElementById("search-input");
 const sectionTitle = document.getElementById("section-title");
@@ -214,7 +216,7 @@ function loadGenres() {
 // Función para filtrar por género
 function filterByGenre(genreName) {
     sectionTitle.innerText = genreName.charAt(0).toUpperCase() + genreName.slice(1);
-    const filtered = songs.filter(s => 
+    const filtered = songs.filter(s =>
         s.genre && s.genre.toLowerCase().includes(genreName)
     );
     if (filtered.length === 0) {
@@ -730,7 +732,12 @@ function setupEventListeners() {
 
   if (createPlaylistBtn) {
     createPlaylistBtn.addEventListener("click", () => {
-      alert(t("playlist_dev"));
+      const nombre = prompt("¿Cómo se llamará tu nueva playlist?");
+      if (nombre && nombre.trim() !== "") {
+        crarNuevaPlaylistUI(nombre);
+        // Lógica para crear la nueva playlist
+      }
+
     });
   }
 
@@ -876,6 +883,21 @@ function handleMobileMenu() {
 
 handleMobileMenu();
 window.addEventListener('resize', handleMobileMenu);
+// --- PARTE //3: Función para insertar la playlist en la interfaz ---
+function crearNuevaPlaylistUI(nombre) {
+    const listaPlaylistsPreview = document.querySelector('.library-playlists-preview');
+    
+    if (!listaPlaylistsPreview) return;
 
+    const div = document.createElement('div');
+    div.classList.add('preview-item');
+    
+    div.innerHTML = `
+        <i class="fa-solid fa-music"></i>
+        <span class="nav-text">${nombre}</span>
+    `;
+
+    listaPlaylistsPreview.appendChild(div);
+}
 // Iniciar aplicación
 init();
