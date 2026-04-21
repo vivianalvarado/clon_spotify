@@ -205,7 +205,7 @@ const songs = [
     {
         id: 26,
         title: 'Vas a Querer Volver',
-        artist: 'Morat',
+        artist: 'Maite Perroni',
         cover: 'IMG/vasaquerervolver.jpg',
         audio: 'audio/vasaquerervolver.mp3',
         favorite: false
