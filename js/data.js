@@ -5,7 +5,7 @@ const songs = [
     {
         id: 1,
         title: 'Amándote',
-        artist: 'Ricardo Arjona',
+        artist: 'Anna Carina',
         cover: 'IMG/amandote.jpg',
         audio: 'audio/amandote.mp3',
         favorite: false
@@ -101,7 +101,7 @@ const songs = [
     {
         id: 13,
         title: 'La Correcta',
-        artist: 'Karol G',
+        artist: 'Morat',
         cover: 'IMG/lacorrecta.jpg',
         audio: 'audio/lacorrecta.mp3',
         favorite: false
@@ -125,7 +125,7 @@ const songs = [
     {
         id: 16,
         title: 'MANTRA',
-        artist: 'K/DA',
+        artist: 'Jennie Kim',
         cover: 'IMG/mantra.jpg',
         audio: 'audio/mantra.mp3',
         favorite: false
@@ -133,7 +133,7 @@ const songs = [
     {
         id: 17,
         title: 'Mi Buen Amor',
-        artist: 'Morat',
+        artist: 'Mon Laferte',
         cover: 'IMG/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
         favorite: false
@@ -165,7 +165,7 @@ const songs = [
     {
         id: 21,
         title: 'Rockstar',
-        artist: 'Post Malone',
+        artist: 'Lisa',
         cover: 'IMG/rockstar.jpg',
         audio: 'audio/rockstar.mp3',
         favorite: false
@@ -208,6 +208,23 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/vasaquerervolver.jpg',
         audio: 'audio/vasaquerervolver.mp3',
+        favorite: false
+    },
+    {
+        id: 27,
+        title:'Ahora Me Llama',
+        artist:'Karol G,Bad Bunny',
+        cover: 'IMG/mellama.jpg',
+        audio: 'audio/mellama.mp3',
+        favorite: true
+
+    },
+    {
+        id:28,
+        title: 'Boy In Luv',
+        artist:'BTS',
+        cover:'IMG/boy.jpg',
+        audio:'audio/boy.mp3',
         favorite: false
     }
 ];
