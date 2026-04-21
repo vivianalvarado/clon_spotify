@@ -728,11 +728,17 @@ function setupEventListeners() {
     });
   }
 
-  if (createPlaylistBtn) {
+
+if (createPlaylistBtn) {
     createPlaylistBtn.addEventListener("click", () => {
-      alert(t("playlist_dev"));
+        // Reemplazamos el alert(t("playlist_dev")); por esto:
+        const nombre = prompt("¿Cómo se llamará tu nueva playlist?");
+
+        if (nombre && nombre.trim() !== "") {
+            crearNuevaPlaylistUI(nombre);
+        }
     });
-  }
+}
 
   // Tabs de biblioteca
   document.querySelectorAll(".lib-tab").forEach((tab) => {
@@ -876,6 +882,25 @@ function handleMobileMenu() {
 
 handleMobileMenu();
 window.addEventListener('resize', handleMobileMenu);
+// --- UBICACIÓN: Al final del archivo, antes de init(); ---
 
+function crearNuevaPlaylistUI(nombre) {
+    // Seleccionamos el contenedor de la biblioteca que tienes en tu HTML
+    const listaPlaylistsPreview = document.querySelector('.library-playlists-preview');
+    
+    if (!listaPlaylistsPreview) return;
+
+    // Creamos el elemento visual
+    const div = document.createElement('div');
+    div.classList.add('preview-item'); // Usamos tu clase de CSS para que se vea igual
+    
+    div.innerHTML = `
+        <i class="fa-solid fa-music"></i>
+        <span class="nav-text">${nombre}</span>
+    `;
+
+    // Lo añadimos a la lista
+    listaPlaylistsPreview.appendChild(div);
+}
 // Iniciar aplicación
 init();
