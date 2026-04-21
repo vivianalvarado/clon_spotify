@@ -902,5 +902,19 @@ function crearNuevaPlaylistUI(nombre) {
     // Lo añadimos a la lista
     listaPlaylistsPreview.appendChild(div);
 }
+function mostrarMasEscuchados() {
+    // Ordena de mayor a menor según 'plays' y toma las 6 primeras
+    const topSongs = songs.sort((a, b) => b.plays - a.plays).slice(0, 6);
+    
+    // sectionTitle es la variable que ya usas para el encabezado (ej. línea 10 de image_74e4a1)
+    sectionTitle.innerText = "Los más escuchados";
+    loadSongsToCard(topSongs); // Reutiliza tu función que dibuja las canciones
+}
+function filtrarPorGenero(generoSeleccionado) {
+    const filtradas = songs.filter(song => song.genre === generoSeleccionado);
+    
+    sectionTitle.innerText = `Género: ${generoSeleccionado}`;
+    loadSongsToCard(filtradas);
+}
 // Iniciar aplicación
 init();

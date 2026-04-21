@@ -1,6 +1,5 @@
-// Datos de las canciones
-// Corregido y actualizado (att. jose luis)
-
+// js/data.js
+// Datos de las canciones actualizados con Géneros y Reproducciones
 const songs = [
     {
         id: 1,
@@ -8,6 +7,8 @@ const songs = [
         artist: 'Anna Carina',
         cover: 'IMG/amandote.jpg',
         audio: 'audio/amandote.mp3',
+        genre: 'Pop',
+        plays: 450,
         favorite: false
     },
     {
@@ -16,6 +17,8 @@ const songs = [
         artist: 'Mon Laferte',
         cover: 'IMG/amarrame.jpg',
         audio: 'audio/amarrame.mp3',
+        genre: 'Alternativo',
+        plays: 1200,
         favorite: false
     },
     {
@@ -24,6 +27,8 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/amorconhielo.jpg',
         audio: 'audio/amorconhielo.mp3',
+        genre: 'Pop-Rock',
+        plays: 890,
         favorite: false
     },
     {
@@ -32,6 +37,8 @@ const songs = [
         artist: 'BTS',
         cover: 'IMG/butter.jpeg',
         audio: 'audio/butter.mp3',
+        genre: 'K-pop',
+        plays: 2500,
         favorite: false
     },
     {
@@ -40,6 +47,8 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/consejosdeamor.jpg',
         audio: 'audio/consejosdeamor.mp3',
+        genre: 'Pop-Rock',
+        plays: 670,
         favorite: false
     },
     {
@@ -48,6 +57,8 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/cuandonadieve.jpg',
         audio: 'audio/cuandonadieve.mp3',
+        genre: 'Pop-Rock',
+        plays: 1100,
         favorite: false
     },
     {
@@ -56,6 +67,8 @@ const songs = [
         artist: 'BTS',
         cover: 'IMG/dynamite.jpg',
         audio: 'audio/dynamite.mp3',
+        genre: 'K-pop',
+        plays: 3000,
         favorite: false
     },
     {
@@ -64,6 +77,8 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/besosenguerra.jpg',
         audio: 'audio/enguerra.mp3',
+        genre: 'Pop-Rock',
+        plays: 1500,
         favorite: false
     },
     {
@@ -72,6 +87,8 @@ const songs = [
         artist: 'BLACKPINK',
         cover: 'IMG/foreveryoung.jpg',
         audio: 'audio/foreveryoung.mp3',
+        genre: 'K-pop',
+        plays: 1800,
         favorite: false
     },
     {
@@ -80,6 +97,8 @@ const songs = [
         artist: 'BLACKPINK',
         cover: 'IMG/howyoulikethat.jpg',
         audio: 'audio/howyoulikethat.mp3',
+        genre: 'K-pop',
+        plays: 2200,
         favorite: false
     },
     {
@@ -88,6 +107,8 @@ const songs = [
         artist: 'BTS',
         cover: 'IMG/idol.jpg',
         audio: 'audio/idol.mp3',
+        genre: 'K-pop',
+        plays: 2100,
         favorite: false
     },
     {
@@ -96,6 +117,8 @@ const songs = [
         artist: 'BLACKPINK',
         cover: 'IMG/killthislove.jpg',
         audio: 'audio/killthislove.mp3',
+        genre: 'K-pop',
+        plays: 2400,
         favorite: false
     },
     {
@@ -104,6 +127,8 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/lacorrecta.jpg',
         audio: 'audio/lacorrecta.mp3',
+        genre: 'Pop-Rock',
+        plays: 750,
         favorite: false
     },
     {
@@ -112,6 +137,8 @@ const songs = [
         artist: 'Lisa',
         cover: 'IMG/lalisa.jpg',
         audio: 'audio/lalisa.mp3',
+        genre: 'K-pop',
+        plays: 2800,
         favorite: false
     },
     {
@@ -120,6 +147,8 @@ const songs = [
         artist: 'BLACKPINK',
         cover: 'IMG/lovesickgirls.jpg',
         audio: 'audio/lovesickgirls.mp3',
+        genre: 'K-pop',
+        plays: 1900,
         favorite: false
     },
     {
@@ -128,6 +157,8 @@ const songs = [
         artist: 'Jennie Kim',
         cover: 'IMG/mantra.jpg',
         audio: 'audio/mantra.mp3',
+        genre: 'K-pop',
+        plays: 2000,
         favorite: false
     },
     {
@@ -136,6 +167,8 @@ const songs = [
         artist: 'Mon Laferte',
         cover: 'IMG/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
+        genre: 'Alternativo',
+        plays: 1300,
         favorite: false
     },
     {
@@ -144,6 +177,8 @@ const songs = [
         artist: 'Rosé',
         cover: 'IMG/ontheground.jpg',
         audio: 'audio/ontheground.mp3',
+        genre: 'K-pop',
+        plays: 1700,
         favorite: false
     },
     {
@@ -152,6 +187,8 @@ const songs = [
         artist: 'BLACKPINK',
         cover: 'IMG/pinkvenom.jpg',
         audio: 'audio/pinkvenom.mp3',
+        genre: 'K-pop',
+        plays: 2600,
         favorite: false
     },
     {
@@ -160,6 +197,8 @@ const songs = [
         artist: 'Morat',
         cover: 'IMG/presiento.jpg',
         audio: 'audio/presiento.mp3',
+        genre: 'Pop-Rock',
+        plays: 950,
         favorite: false
     },
     {
@@ -168,6 +207,8 @@ const songs = [
         artist: 'Lisa',
         cover: 'IMG/rockstar.jpg',
         audio: 'audio/rockstar.mp3',
+        genre: 'K-pop',
+        plays: 2700,
         favorite: false
     },
     {
@@ -176,6 +217,8 @@ const songs = [
         artist: 'Jungkook',
         cover: 'IMG/seven.jpg',
         audio: 'audio/seven.mp3',
+        genre: 'K-pop',
+        plays: 2900,
         favorite: false
     },
     {
@@ -184,6 +227,8 @@ const songs = [
         artist: 'Jennie',
         cover: 'IMG/solo.jpg',
         audio: 'audio/solo.mp3',
+        genre: 'K-pop',
+        plays: 2300,
         favorite: false
     },
     {
@@ -192,6 +237,8 @@ const songs = [
         artist: 'Lady Gaga & BLACKPINK',
         cover: 'IMG/sourcandy.jpg',
         audio: 'audio/sourcandy.mp3',
+        genre: 'Pop',
+        plays: 1400,
         favorite: false
     },
     {
@@ -200,6 +247,8 @@ const songs = [
         artist: 'Mon Laferte',
         cover: 'IMG/tufaltadequerer.jpg',
         audio: 'audio/tufaltadequerer.mp3',
+        genre: 'Alternativo',
+        plays: 1600,
         favorite: false
     },
     {
@@ -208,119 +257,148 @@ const songs = [
         artist: 'Maite Perroni',
         cover: 'IMG/vasaquerervolver.jpg',
         audio: 'audio/vasaquerervolver.mp3',
+        genre: 'Balada',
+        plays: 500,
         favorite: false
     },
     {
         id: 27,
-        title:'Ahora Me Llama',
-        artist:'Karol G,Bad Bunny',
+        title: 'Ahora Me Llama',
+        artist: 'Karol G, Bad Bunny',
         cover: 'IMG/mellama.jpg',
         audio: 'audio/mellama.mp3',
+        genre: 'Reggaetón',
+        plays: 2100,
         favorite: true
-
     },
     {
-        id:28,
+        id: 28,
         title: 'Location',
-        artist:'KAROL G, Anuel AA, J. Balvin',
-        cover:'IMG/location.jpg',
-        audio:'audio/location.mp3',
+        artist: 'KAROL G, Anuel AA, J. Balvin',
+        cover: 'IMG/location.jpg',
+        audio: 'audio/location.mp3',
+        genre: 'Reggaetón',
+        plays: 1800,
         favorite: false
     },
     {
-        id:29,
+        id: 29,
         title: 'GABRIELA',
-        artist:'KATSEYE',
-        cover:'IMG/gabriela.jpg',
-        audio:'audio/gabriela.mp3',
+        artist: 'KATSEYE',
+        cover: 'IMG/gabriela.jpg',
+        audio: 'audio/gabriela.mp3',
+        genre: 'Pop',
+        plays: 400,
         favorite: false
     },
     {
-        id:30,
+        id: 30,
         title: 'EL MAKINON',
-        artist:'KAROL G, Mariah Angeliq',
-        cover:'IMG/makinon.jpg',
-        audio:'audio/makinon.mp3',
+        artist: 'KAROL G, Mariah Angeliq',
+        cover: 'IMG/makinon.jpg',
+        audio: 'audio/makinon.mp3',
+        genre: 'Reggaetón',
+        plays: 1950,
         favorite: false
     },
     {
-        id:31,
+        id: 31,
         title: '10 Mill Vidas',
-        artist:'Jesse & Joy',
-        cover:'IMG/10milvidas.jpg',
-        audio:'audio/10milvidas.mp3',
+        artist: 'Jesse & Joy',
+        cover: 'IMG/10milvidas.jpg',
+        audio: 'audio/10milvidas.mp3',
+        genre: 'Pop',
+        plays: 600,
         favorite: false
     },
     {
-        id:32,
+        id: 32,
         title: 'Hold On',
-        artist:'Adele',
-        cover:'IMG/HoldOn.jpg',
-        audio:'audio/Adele - Hold On (Official Lyric Video)(MP3_160K).mp3',
+        artist: 'Adele',
+        cover: 'IMG/HoldOn.jpg',
+        audio: 'audio/Adele - Hold On (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 1100,
         favorite: false
     },
     {
-        id:33,
+        id: 33,
         title: 'I Drink Wine',
-        artist:'Adele',
-        cover:'IMG/IDrinkWin.jpg',
-        audio:'audio/Adele - I Drink Wine (Official Lyric Video)(MP3_160K).mp3',
+        artist: 'Adele',
+        cover: 'IMG/IDrinkWin.jpg',
+        audio: 'audio/Adele - I Drink Wine (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 1050,
         favorite: false
     },
     {
-        id:34,
-        title: 'BLove Is A Game',
-        artist:'Adele',
-        cover:'IMG/Love Is A Game.jpg',
-        audio:'audio/Adele - Love Is A Game (Official Lyric Video)(MP3_160K).mp3',
+        id: 34,
+        title: 'Love Is A Game',
+        artist: 'Adele',
+        cover: 'IMG/Love Is A Game.jpg',
+        audio: 'audio/Adele - Love Is A Game (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 900,
         favorite: false
     },
     {
-        id:35,
+        id: 35,
         title: 'My Little Love',
-        artist:'Adele',
-        cover:'IMG/My Little Love.jpg',
-        audio:'audio/Adele - My Little Love (Official Lyric Video)(MP3_160K).mp3',
+        artist: 'Adele',
+        cover: 'IMG/My Little Love.jpg',
+        audio: 'audio/Adele - My Little Love (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 850,
         favorite: false
     },
     {
-        id:36,
+        id: 36,
         title: 'Oh My God',
-        artist:'Adele',
-        cover:'IMG/Oh My God.jpg',
-        audio:'audio/Adele - Oh My God (Official Lyric Video)(MP3_160K).mp3',
+        artist: 'Adele',
+        cover: 'IMG/Oh My God.jpg',
+        audio: 'audio/Adele - Oh My God (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 1450,
         favorite: false
     },
     {
-        id:37,
+        id: 37,
         title: 'Strangers By Nature',
-        artist:'Adele',
-        cover:'IMG/Strangers By Nature.jpg',
-        audio:'audio/Adele - Strangers By Nature (Official Lyric Video)(MP3_160K).mp3',
+        artist: 'Adele',
+        cover: 'IMG/Strangers By Nature.jpg',
+        audio: 'audio/Adele - Strangers By Nature (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 700,
         favorite: false
     },
     {
-        id:38,
+        id: 38,
         title: 'To Be Loved',
-        artist:'Adele',
-        cover:'IMG/To Be Loved.jpg',
-        audio:'audio/Adele - To Be Loved (Official Lyric Video)(MP3_160K).mp3',
+        artist: 'Adele',
+        cover: 'IMG/To Be Loved.jpg',
+        audio: 'audio/Adele - To Be Loved (Official Lyric Video)(MP3_160K).mp3',
+        genre: 'Soul',
+        plays: 650,
         favorite: false
     },
     {
-        id:39,
+        id: 39,
         title: 'Rolling in the Deep',
-        artist:'Adele',
-        cover:'IMG/Rolling in the Deep.jpg',
-        audio:'audio/Adele-Rolling in the Deep.mp3',
+        artist: 'Adele',
+        cover: 'IMG/Rolling in the Deep.jpg',
+        audio: 'audio/Adele-Rolling in the Deep.mp3',
+        genre: 'Soul',
+        plays: 3500,
         favorite: false
     },
     {
-        id:40,
+        id: 40,
         title: 'All Night Parking',
-        artist:'Adele',
-        cover:'IMG/allnightparking.jpg',
-        audio:'audio/allnightparking.mp3',
+        artist: 'Adele',
+        cover: 'IMG/allnightparking.jpg',
+        audio: 'audio/allnightparking.mp3',
+        genre: 'Soul',
+        plays: 800,
         favorite: false
-    },
+    }
 ];
