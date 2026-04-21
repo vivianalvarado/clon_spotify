@@ -221,10 +221,106 @@ const songs = [
     },
     {
         id:28,
-        title: 'Boy In Luv',
-        artist:'BTS',
-        cover:'IMG/boy.jpg',
-        audio:'audio/boy.mp3',
+        title: 'Location',
+        artist:'KAROL G, Anuel AA, J. Balvin',
+        cover:'IMG/location.jpg',
+        audio:'audio/location.mp3',
         favorite: false
-    }
+    },
+    {
+        id:29,
+        title: 'GABRIELA',
+        artist:'KATSEYE',
+        cover:'IMG/gabriela.jpg',
+        audio:'audio/gabriela.mp3',
+        favorite: false
+    },
+    {
+        id:30,
+        title: 'EL MAKINON',
+        artist:'KAROL G, Mariah Angeliq',
+        cover:'IMG/makinon.jpg',
+        audio:'audio/makinon.mp3',
+        favorite: false
+    },
+    {
+        id:31,
+        title: '10 Mill Vidas',
+        artist:'Jesse & Joy',
+        cover:'IMG/10milvidas.jpg',
+        audio:'audio/10milvidas.mp3',
+        favorite: false
+    },
+    {
+        id:32,
+        title: 'Hold On',
+        artist:'Adele',
+        cover:'IMG/HoldOn.jpg',
+        audio:'audio/Adele - Hold On (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:33,
+        title: 'I Drink Wine',
+        artist:'Adele',
+        cover:'IMG/IDrinkWin.jpg',
+        audio:'audio/Adele - I Drink Wine (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:34,
+        title: 'BLove Is A Game',
+        artist:'Adele',
+        cover:'IMG/Love Is A Game.jpg',
+        audio:'audio/Adele - Love Is A Game (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:35,
+        title: 'My Little Love',
+        artist:'Adele',
+        cover:'IMG/My Little Love.jpg',
+        audio:'audio/Adele - My Little Love (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:36,
+        title: 'Oh My God',
+        artist:'Adele',
+        cover:'IMG/Oh My God.jpg',
+        audio:'audio/Adele - Oh My God (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:37,
+        title: 'Strangers By Nature',
+        artist:'Adele',
+        cover:'IMG/Strangers By Nature.jpg',
+        audio:'audio/Adele - Strangers By Nature (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:38,
+        title: 'To Be Loved',
+        artist:'Adele',
+        cover:'IMG/To Be Loved.jpg',
+        audio:'audio/Adele - To Be Loved (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:39,
+        title: 'Rolling in the Deep',
+        artist:'Adele',
+        cover:'IMG/Rolling in the Deep.jpg',
+        audio:'audio/Adele-Rolling in the Deep.mp3',
+        favorite: false
+    },
+    {
+        id:40,
+        title: 'All Night Parking',
+        artist:'Adele',
+        cover:'IMG/allnightparking.jpg',
+        audio:'audio/allnightparking.mp3',
+        favorite: false
+    },
 ];
