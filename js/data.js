@@ -724,7 +724,7 @@ const songs = [
         title: 'Love Is A Game',
         artist: 'Adele',
         artistImage: 'img/artistas/loveisagame.jpg',
-        cover: 'img/loveisagame.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/loveisagame.mp3',
         favorite: false,
         album: '30'
@@ -734,7 +734,7 @@ const songs = [
         title: 'My Little Love',
         artist: 'Adele',
         artistImage: 'img/artistas/mylittlelove.jpg',
-        cover: 'img/mylittlelove.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/mylittlelove.mp3',
         favorite: false,
         album: '30'
@@ -744,7 +744,7 @@ const songs = [
         title: 'Oh My God',
         artist: 'Adele',
         artistImage: 'img/artistas/ohmygod.jpg',
-        cover: 'img/ohmygod.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/ohmygod.mp3',
         favorite: false,
         album: '30'
@@ -754,7 +754,7 @@ const songs = [
         title: 'Strangers By Nature',
         artist: 'Adele',
         artistImage: 'img/artistas/strangersbynature.jpg',
-        cover: 'img/strangersbynature.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/strangersbynature.mp3',
         favorite: false,
         album: '30'
@@ -764,7 +764,7 @@ const songs = [
         title: 'To Be Loved',
         artist: 'Adele',
         artistImage: 'img/artistas/tobeloved.jpg',
-        cover: 'img/tobeloved.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/tobeloved.mp3',
         favorite: false,
         album: '30'
@@ -774,7 +774,7 @@ const songs = [
         title: 'Rolling in the Deep',
         artist: 'Adele',
         artistImage: 'img/artistas/rollinginthedeep.jpg',
-        cover: 'img/rollinginthedeep.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/rollinginthedeep.mp3',
         favorite: false,
         album: '21'
@@ -784,7 +784,7 @@ const songs = [
         title: 'All Night Parking',
         artist: 'Adele',
         artistImage: 'img/artistas/allnightparking.jpg',
-        cover: 'img/allnightparking.jpg',
+        cover: 'img/holdon.jpg',
         audio: 'audio/allnightparking.mp3',
         favorite: false,
         album: '30'
