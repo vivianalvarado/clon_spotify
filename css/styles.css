@@ -1,16 +1,29 @@
-/* 1. Variables de Diseño Spotify */
+/* 1. Variables de Diseño - Paleta Morada Vibrante */
 :root {
-    --bg-black: #000000;
-    --bg-dark: #121212;
-    --bg-card: #181818;
-    --bg-hover: #282828;
-    --bg-elevated: #242424;
-    --spotify-green: #1db954;
-    --spotify-green-hover: #1ed760;
+    /* Colores Base - Inspirados en Logo Morado */
+    --bg-black: #0a0a0a;        /* Fondo más profundo */
+    --bg-dark: #121212;         /* Fondo secundario */
+    --bg-card: #1a1a1a;         /* Fondo de tarjetas */
+    --bg-hover: #2a2a2a;        /* Hover más claro */
+    --bg-elevated: #282828;     /* Elementos elevados */
+    
+    /* Paleta Morada Principal (Reemplaza al verde Spotify) */
+    --primary-color: #9b4dff;   /* Morado vibrante principal */
+    --primary-hover: #b87cff;   /* Morado más claro para hover */
+    --primary-glow: rgba(155, 77, 255, 0.2); /* Sombra/Glow morada */
+    --primary-gradient: linear-gradient(135deg, #9b4dff 0%, #6c2bd9 100%);
+    
+    /* Colores de Texto */
     --text-main: #ffffff;
     --text-sec: #b3b3b3;
     --text-muted: #7a7a7a;
-    --border-color: #282828;
+    
+    /* Colores de Borde y Estado */
+    --border-color: #2a2a2a;
+    --danger-color: #ff4444;
+    --danger-hover: #ff6666;
+    
+    /* Transiciones y Layout */
     --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --sidebar-width-collapsed: 72px;
     --sidebar-width-expanded: 240px;
@@ -91,7 +104,7 @@ body {
     gap: 12px;
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--spotify-green);
+    color: var(--primary-color); /* Color morado para el logo */
     margin-bottom: 8px;
 }
 
@@ -232,7 +245,7 @@ body {
 }
 
 .add-playlist-btn:hover {
-    color: var(--spotify-green);
+    color: var(--primary-color);
     background: var(--bg-hover);
 }
 
@@ -322,7 +335,7 @@ body {
 }
 
 .delete-playlist-btn:hover {
-    color: #ff4444;
+    color: var(--danger-color);
     background: rgba(255, 68, 68, 0.1);
 }
 
@@ -368,7 +381,7 @@ body {
 
 /* Main Content */
 .main-content {
-    background: linear-gradient(to bottom, #1f1f2f, var(--bg-dark));
+    background: linear-gradient(to bottom, #1a1a2a, var(--bg-dark));
     border-radius: 12px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -389,8 +402,7 @@ body {
     border-radius: 4px;
 }
 
-
-/* Buscador integrado - Ahora más grande y centrado */
+/* Buscador integrado */
 .search-container {
     background: var(--bg-elevated);
     border-radius: 500px;
@@ -398,13 +410,11 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
-    width: 100%; /* Corregido a 100% para evitar desbordamientos */
+    width: 100%;
     max-width: 500px;
     transition: var(--transition-default);
     border: 1px solid transparent;
-    
-    /* MODIFICACIÓN: 50px de espacio arriba, auto a los lados para centrar */
-    margin: 50px auto 20px auto; 
+    margin: 50px auto 20px auto;
 }
 
 .search-container:hover {
@@ -412,8 +422,8 @@ body {
 }
 
 .search-container:focus-within {
-    border-color: var(--spotify-green);
-    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-glow);
 }
 
 .search-container i {
@@ -434,34 +444,7 @@ body {
     color: var(--text-sec);
 }
 
-.search-container:hover {
-    border-color: var(--text-muted);
-}
-
-.search-container:focus-within {
-    border-color: var(--spotify-green);
-    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
-}
-
-.search-container i {
-    color: var(--text-sec);
-    font-size: 1.2rem;
-}
-
-#search-input {
-    background: transparent;
-    border: none;
-    color: var(--text-main);
-    font-size: 1rem;
-    width: 100%;
-    outline: none;
-}
-
-#search-input::placeholder {
-    color: var(--text-sec);
-}
-
-/* Ajustar el header para que el buscador se vea bien */
+/* Ajustar el header */
 .content-header {
     display: flex;
     justify-content: space-between;
@@ -471,20 +454,9 @@ body {
     gap: 16px;
 }
 
-/* Eliminar estilos de navigation-buttons y user-menu que ya no se usan */
 .navigation-buttons,
 .user-menu {
     display: none;
-}
-
-/* Buscador integrado */
-.content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-    gap: 16px;
 }
 
 .greeting-section {
@@ -495,50 +467,10 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    background: linear-gradient(135deg, #fff, #b3b3b3);
+    background: linear-gradient(135deg, #fff, var(--primary-color));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-.search-container {
-    background: var(--bg-elevated);
-    border-radius: 500px;
-    padding: 8px 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    max-width: 300px;
-    transition: var(--transition-default);
-    border: 1px solid transparent;
-}
-
-.search-container:hover {
-    border-color: var(--text-muted);
-}
-
-.search-container:focus-within {
-    border-color: var(--spotify-green);
-    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
-}
-
-.search-container i {
-    color: var(--text-sec);
-    font-size: 1.1rem;
-}
-
-#search-input {
-    background: transparent;
-    border: none;
-    color: var(--text-main);
-    font-size: 0.95rem;
-    width: 100%;
-    outline: none;
-}
-
-#search-input::placeholder {
-    color: var(--text-sec);
 }
 
 /* Cards */
@@ -667,7 +599,7 @@ body {
     position: absolute;
     bottom: 8px;
     right: 8px;
-    background-color: var(--spotify-green);
+    background-color: var(--primary-color);
     border: none;
     border-radius: 50%;
     width: 48px;
@@ -689,7 +621,7 @@ body {
 }
 
 .play-btn:hover {
-    background-color: var(--spotify-green-hover);
+    background-color: var(--primary-hover);
     transform: scale(1.05);
 }
 
@@ -720,7 +652,7 @@ body {
 }
 
 .add-to-playlist-icon:hover {
-    color: var(--spotify-green);
+    color: var(--primary-color);
     background: rgba(0, 0, 0, 0.9);
 }
 
@@ -768,7 +700,7 @@ body {
 
 .add-to-playlist-menu-item i {
     width: 20px;
-    color: var(--spotify-green);
+    color: var(--primary-color);
 }
 
 .add-to-playlist-menu-divider {
@@ -816,7 +748,7 @@ body {
 }
 
 .back-to-home-btn:hover {
-    background: var(--spotify-green);
+    background: var(--primary-color);
     color: #000;
 }
 
@@ -844,7 +776,7 @@ body {
 }
 
 .lib-tab.active {
-    color: var(--spotify-green);
+    color: var(--primary-color);
 }
 
 .lib-tab.active::after {
@@ -854,7 +786,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background: var(--spotify-green);
+    background: var(--primary-color);
 }
 
 .lib-tab:hover {
@@ -894,7 +826,7 @@ body {
 
 .library-grid-item .item-image i {
     font-size: 3rem;
-    color: var(--spotify-green);
+    color: var(--primary-color);
 }
 
 .library-grid-item .item-image img {
@@ -980,7 +912,7 @@ body {
     transform: translate(-50%, -50%);
     width: 50px;
     height: 50px;
-    background: var(--spotify-green);
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1028,7 +960,7 @@ body {
 }
 
 .track-action:hover {
-    color: var(--spotify-green);
+    color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -1153,7 +1085,7 @@ body {
 }
 
 .mini-like:hover {
-    color: var(--spotify-green);
+    color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -1198,7 +1130,7 @@ body {
 
 .play-pause-btn:hover {
     transform: scale(1.05);
-    color: var(--spotify-green);
+    color: var(--primary-color);
 }
 
 .playback-progress {
@@ -1225,7 +1157,7 @@ body {
 
 .progress-fill {
     height: 100%;
-    background: var(--text-main);
+    background: var(--primary-color);
     border-radius: 2px;
     width: 0%;
     transition: width 0.1s linear;
@@ -1245,7 +1177,7 @@ body {
 }
 
 .progress-bar-container:hover .progress-fill {
-    background: var(--spotify-green);
+    background: var(--primary-hover);
 }
 
 .progress-bar-container:hover .progress-handle {
@@ -1296,7 +1228,7 @@ body {
 
 .volume-fill {
     height: 100%;
-    background: var(--text-main);
+    background: var(--primary-color);
     border-radius: 2px;
     width: 65%;
 }
@@ -1306,7 +1238,7 @@ body {
 }
 
 .volume-slider:hover .volume-fill {
-    background: var(--spotify-green);
+    background: var(--primary-hover);
 }
 
 /* Modal */
@@ -1353,7 +1285,7 @@ body {
 }
 
 .modal-container h2 i {
-    color: var(--spotify-green);
+    color: var(--primary-color);
     margin-right: 10px;
 }
 
@@ -1376,7 +1308,7 @@ body {
 
 .modal-input:focus {
     outline: none;
-    border-color: var(--spotify-green);
+    border-color: var(--primary-color);
 }
 
 .modal-buttons {
@@ -1405,12 +1337,12 @@ body {
 }
 
 .modal-btn-create {
-    background: var(--spotify-green);
+    background: var(--primary-color);
     color: #000;
 }
 
 .modal-btn-create:hover {
-    background: var(--spotify-green-hover);
+    background: var(--primary-hover);
 }
 
 /* Notificaciones */
@@ -1418,7 +1350,7 @@ body {
     position: fixed;
     bottom: 100px;
     right: 20px;
-    background: var(--spotify-green);
+    background: var(--primary-color);
     color: #000;
     padding: 12px 20px;
     border-radius: 8px;
@@ -1561,7 +1493,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ff4444;
+    color: var(--danger-color);
     font-size: 0.9rem;
 }
 
@@ -1571,7 +1503,7 @@ body {
 }
 
 .remove-from-playlist-icon:hover {
-    color: #ff0000;
+    color: var(--danger-hover);
     background: rgba(0, 0, 0, 0.9);
     transform: scale(1.05);
 }
@@ -1620,7 +1552,7 @@ body {
 }
 
 .create-btn-top:hover {
-    color: var(--spotify-green);
+    color: var(--primary-color);
     background: var(--bg-hover);
 }
 
@@ -1685,7 +1617,7 @@ body {
 }
 
 .language-option.is-selected {
-    background: rgba(29, 185, 84, 0.16);
+    background: rgba(155, 77, 255, 0.16);
     color: var(--text-main);
 }
 
@@ -1745,8 +1677,8 @@ body {
 }
 
 .search-box:focus-within {
-    border-color: var(--spotify-green);
-    box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-glow);
 }
 
 .search-box__icon {
@@ -1778,7 +1710,7 @@ body {
 }
 
 .filter-tab.active {
-    background: var(--text-main);
+    background: var(--primary-color);
     color: #000;
 }
 
@@ -1833,7 +1765,7 @@ body {
     height: 42px;
     border: none;
     border-radius: 50%;
-    background: var(--spotify-green);
+    background: var(--primary-color);
     color: #000;
     display: flex;
     align-items: center;

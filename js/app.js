@@ -127,257 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
             color: ${isError ? '#fff' : '#000'};
             padding: 12px 20px;
             border-radius: 8px;
-<<<<<<< HEAD
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-bottom: 8px;
-        }
-        .queue-item:hover {
-            background: #282828;
-        }
-        .queue-item.active {
-            background: #1db95420;
-            border-left: 3px solid #1db954;
-        }
-        .queue-item img {
-            width: 40px;
-            height: 40px;
-            border-radius: 6px;
-            object-fit: cover;
-        }
-        .queue-info {
-            flex: 1;
-        }
-        .queue-info h6 {
-            font-size: 0.85rem;
-            margin: 0;
-        }
-        .queue-info p {
-            font-size: 0.7rem;
-            color: #b3b3b3;
-            margin: 0;
-        }
-        .queue-play-btn {
-            background: #1db954;
-            border: none;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-        .queue-item:hover .queue-play-btn {
-            opacity: 1;
-        }
-    `;
-  document.head.appendChild(style);
-
-  document.querySelectorAll(".queue-play-btn, .queue-item").forEach((el) => {
-    if (el.classList.contains("queue-play-btn")) {
-      el.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const idx = parseInt(el.dataset.index);
-        playSongAtIndex(idx);
-      });
-    } else if (el.classList.contains("queue-item")) {
-      el.addEventListener("click", () => {
-        const idx = parseInt(el.dataset.index);
-        playSongAtIndex(idx);
-      });
-    }
-  });
-}
-
-function searchSongs() {
-  const term = searchInput.value.toLowerCase();
-  searchTerm = term;
-
-  if (!term) {
-    sectionTitle.innerText = t("greeting");
-    loadSongsToCard(songs);
-    return;
-  }
-
-  const filtered = songs.filter(
-    (song) =>
-      song.title.toLowerCase().includes(term) ||
-      song.artist.toLowerCase().includes(term),
-  );
-
-  sectionTitle.innerText = t("search_results", { term });
-  loadSongsToCard(filtered);
-}
-
-function setupEventListeners() {
-  // Reproducción
-  playPauseBtn.addEventListener("click", togglePlay);
-  nextBtn.addEventListener("click", nextSong);
-  prevBtn.addEventListener("click", prevSong);
-  shuffleBtn.addEventListener("click", () => {
-    isShuffle = !isShuffle;
-    shuffleBtn.style.color = isShuffle ? "#1db954" : "#b3b3b3";
-  });
-  repeatBtn.addEventListener("click", () => {
-    isRepeat = !isRepeat;
-    repeatBtn.style.color = isRepeat ? "#1db954" : "#b3b3b3";
-  });
-
-  // Like
-  likeTrackBtn.addEventListener("click", toggleLike);
-  if (panelLikeBtn) panelLikeBtn.addEventListener("click", toggleLike);
-
-  // Barra de progreso
-  audioPlayer.addEventListener("timeupdate", updateProgress);
-  progressBarBg.addEventListener("click", seek);
-
-  // Volumen
-  volumeBar.addEventListener("click", (e) => {
-    const rect = volumeBar.getBoundingClientRect();
-    const percent = (e.clientX - rect.left) / rect.width;
-    audioPlayer.volume = Math.min(1, Math.max(0, percent));
-    volumeFill.style.width = `${audioPlayer.volume * 100}%`;
-    updateVolumeIcon();
-  });
-
-  audioPlayer.volume = 0.65;
-  volumeFill.style.width = "65%";
-
-  // Eventos de audio
-  audioPlayer.addEventListener("ended", () => {
-    if (isRepeat) {
-      audioPlayer.currentTime = 0;
-      playSong();
-    } else {
-      nextSong();
-    }
-  });
-
-  audioPlayer.addEventListener("loadedmetadata", () => {
-    totalDurationSpan.innerText = formatTime(audioPlayer.duration);
-  });
-
-  // Búsqueda - MODIFICADO
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.trim();
-
-      if (term === '') {
-        showExploreView();
-      } else {
-        searchSongs();
-        showMainContent();
-      }
-    });
-
-    searchInput.addEventListener('focus', () => {
-      if (searchInput.value.trim() === '') {
-        showExploreView();
-      }
-    });
-  }
-
-  // Navegación - mejorado
-  if (navHome) {
-    navHome.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (searchInput) searchInput.value = '';
-      searchTerm = '';
-      sectionTitle.innerText = t("greeting");
-      loadSongsToCard(songs);
-      if (libraryContainer) libraryContainer.style.display = 'none';
-      showHomeView();
-    });
-  }
-
-  if (navSearch) {
-    navSearch.addEventListener('click', (e) => {
-      e.preventDefault();
-      showExploreView();
-      if (searchInput) searchInput.focus();
-    });
-  }
-
-  if (topBarHome && navHome) {
-    topBarHome.addEventListener('click', () => navHome.click());
-  }
-
-  if (searchBrowseBtn) {
-    searchBrowseBtn.addEventListener('click', () => {
-      showExploreView();
-      if (searchInput) searchInput.focus();
-    });
-  }
-
-  if (navLibrary) {
-    navLibrary.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (libraryContainer) {
-        libraryContainer.style.display =
-          libraryContainer.style.display === 'none' ? 'block' : 'none';
-        if (libraryContainer.style.display === 'block') {
-          loadLibraryContent();
-        }
-      }
-    });
-  }
-
-  if (closeLibrary) {
-    closeLibrary.addEventListener("click", () => {
-      libraryContainer.style.display = "none";
-    });
-  }
-
-
-if (createPlaylistBtn) {
-    createPlaylistBtn.addEventListener("click", () => {
-        // Reemplazamos el alert(t("playlist_dev")); por esto:
-        const nombre = prompt("¿Cómo se llamará tu nueva playlist?");
-
-        if (nombre && nombre.trim() !== "") {
-            crearNuevaPlaylistUI(nombre);
-        }
-    });
-}
-
-  // Tabs de biblioteca
-  document.querySelectorAll(".lib-tab").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      document
-        .querySelectorAll(".lib-tab")
-        .forEach((t) => t.classList.remove("active"));
-      tab.classList.add("active");
-      const tabName = tab.dataset.tab;
-      document.getElementById("playlists-section").style.display =
-        tabName === "playlists" ? "block" : "none";
-      document.getElementById("artists-section").style.display =
-        tabName === "artists" ? "block" : "none";
-    });
-  });
-}
-
-function loadLibraryContent() {
-  const playlistsList = document.getElementById("playlists-list");
-  const artistsList = document.getElementById("artists-list");
-
-  if (playlistsList) {
-    playlistsList.innerHTML = `
-            <div class="library-item" data-library-id="likes">
-                <div class="library-icon" style="background: #1db954;"><i class="fa-solid fa-heart"></i></div>
-                <div class="library-info"><h4>${t("likes")}</h4><p>${t("song_count", { n: songs.filter((s) => s.favorite).length })}</p></div>
-                <button class="library-play-btn"><i class="fa-solid fa-play"></i></button>
-            </div>
-            <div class="library-item" data-library-id="recent">
-                <div class="library-icon" style="background: #5038a0;"><i class="fa-solid fa-clock"></i></div>
-                <div class="library-info"><h4>${t("recent")}</h4><p>${t("song_count", { n: Math.min(5, songs.length) })}</p></div>
-                <button class="library-play-btn"><i class="fa-solid fa-play"></i></button>
-            </div>
-=======
             font-weight: 600;
             z-index: 2000;
             animation: slideInRight 0.3s ease;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
->>>>>>> origin/develop
         `;
         notification.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}"></i> ${escapeHtml(message)}`;
         document.body.appendChild(notification);
@@ -615,46 +368,6 @@ function loadLibraryContent() {
     function initLanguageSwitcher() {
         if (!window.AppI18n || !langDropdown || !langMenuBtn) return;
 
-<<<<<<< HEAD
-handleMobileMenu();
-window.addEventListener('resize', handleMobileMenu);
-// --- UBICACIÓN: Al final del archivo, antes de init(); ---
-
-function crearNuevaPlaylistUI(nombre) {
-    // Seleccionamos el contenedor de la biblioteca que tienes en tu HTML
-    const listaPlaylistsPreview = document.querySelector('.library-playlists-preview');
-    
-    if (!listaPlaylistsPreview) return;
-
-    // Creamos el elemento visual
-    const div = document.createElement('div');
-    div.classList.add('preview-item'); // Usamos tu clase de CSS para que se vea igual
-    
-    div.innerHTML = `
-        <i class="fa-solid fa-music"></i>
-        <span class="nav-text">${nombre}</span>
-    `;
-
-    // Lo añadimos a la lista
-    listaPlaylistsPreview.appendChild(div);
-}
-function mostrarMasEscuchados() {
-    // Ordena de mayor a menor según 'plays' y toma las 6 primeras
-    const topSongs = songs.sort((a, b) => b.plays - a.plays).slice(0, 6);
-    
-    // sectionTitle es la variable que ya usas para el encabezado (ej. línea 10 de image_74e4a1)
-    sectionTitle.innerText = "Los más escuchados";
-    loadSongsToCard(topSongs); // Reutiliza tu función que dibuja las canciones
-}
-function filtrarPorGenero(generoSeleccionado) {
-    const filtradas = songs.filter(song => song.genre === generoSeleccionado);
-    
-    sectionTitle.innerText = `Género: ${generoSeleccionado}`;
-    loadSongsToCard(filtradas);
-}
-// Iniciar aplicación
-init();
-=======
         langDropdown.innerHTML = '';
         window.AppI18n.LANGS.forEach(langMeta => {
             const option = document.createElement('li');
@@ -690,41 +403,6 @@ init();
         });
 
         window.AppI18n.applyToDocument();
-    }
-    
-    // Mostrar menú contextual para eliminar canción de playlist (aparece al hacer clic derecho o mantener presionado)
-    function showRemoveFromPlaylistMenu(song, x, y, playlistId, playlistName) {
-        closeActiveMenu();
-        
-        const menu = document.createElement('div');
-        menu.className = 'add-to-playlist-menu';
-        menu.style.position = 'fixed';
-        menu.style.left = x + 'px';
-        menu.style.top = y + 'px';
-        
-        // Opción para eliminar de la playlist
-        const removeOption = document.createElement('div');
-        removeOption.className = 'add-to-playlist-menu-item';
-        removeOption.style.color = '#ff4444';
-        removeOption.innerHTML = '<i class="fa-solid fa-trash"></i> <span>Eliminar de "' + escapeHtml(playlistName) + '"</span>';
-        removeOption.onclick = () => {
-            closeActiveMenu();
-            removeSongFromPlaylist(playlistId, song);
-        };
-        menu.appendChild(removeOption);
-        
-        document.body.appendChild(menu);
-        activeMenu = menu;
-        
-        // Cerrar al hacer clic fuera
-        setTimeout(() => {
-            document.addEventListener('click', function closeMenu(e) {
-                if (!menu.contains(e.target)) {
-                    closeActiveMenu();
-                    document.removeEventListener('click', closeMenu);
-                }
-            });
-        }, 0);
     }
     
     // Eliminar canción de una playlist
@@ -857,6 +535,17 @@ init();
                 updatePlaylistsList();
             }
         }
+    }
+
+    function getRegularPlaylists() {
+        if (!Array.isArray(userPlaylists)) return [];
+        return userPlaylists.filter(playlist =>
+            playlist &&
+            typeof playlist === 'object' &&
+            typeof playlist.name === 'string' &&
+            Array.isArray(playlist.songs) &&
+            playlist.name !== "Canciones que me gustan"
+        );
     }
     
     // Mostrar vista principal (Inicio)
@@ -994,30 +683,6 @@ init();
             .sort((a, b) => getRecommendationScore(b, profile) - getRecommendationScore(a, profile));
 
         return sorted.slice(0, limit);
-    }
-
-    function getCategorySections(limitPerCategory = 12, maxSections = 3) {
-        const profile = buildUserTasteProfile();
-        const weightedCategories = Object.entries(profile.categoryWeights)
-            .sort((a, b) => b[1] - a[1])
-            .map(([category]) => category);
-
-        if (weightedCategories.length === 0) {
-            return [];
-        }
-
-        return weightedCategories.slice(0, maxSections).map(category => {
-            const items = songs
-                .filter(song => getSongCategory(song) === category)
-                .sort((a, b) => (playCounts[b.id] || 0) - (playCounts[a.id] || 0))
-                .slice(0, limitPerCategory);
-
-            return {
-                key: `category-${normalizeText(category).replace(/\s+/g, '-')}`,
-                title: `Tu categoría: ${category}`,
-                items
-            };
-        }).filter(section => section.items.length > 0);
     }
 
     function renderHomeSections() {
@@ -1228,8 +893,11 @@ init();
     
     // Mostrar vista de biblioteca (solo Playlists y Álbumes)
     function showLibraryView(title, items, type) {
-        if (cardContainer) cardContainer.style.display = 'none';
+        if (homeSectionsContainer) homeSectionsContainer.style.display = 'none';
+        if (artistsContainer) artistsContainer.style.display = 'none';
+        if (exploreContainer) exploreContainer.style.display = 'none';
         if (libraryView) libraryView.style.display = 'block';
+        if (cardContainer) cardContainer.style.display = 'none';
         if (libraryViewTitle) libraryViewTitle.textContent = title;
         if (noResults) noResults.style.display = 'none';
         
@@ -1817,11 +1485,33 @@ init();
         const saved = localStorage.getItem('userPlaylists');
         if (saved) {
             try {
-                userPlaylists = JSON.parse(saved);
+                const parsed = JSON.parse(saved);
+                if (Array.isArray(parsed)) {
+                    userPlaylists = parsed.filter(playlist =>
+                        playlist &&
+                        typeof playlist === 'object' &&
+                        typeof playlist.name === 'string' &&
+                        Array.isArray(playlist.songs)
+                    );
+                } else if (parsed && Array.isArray(parsed.playlists)) {
+                    userPlaylists = parsed.playlists.filter(playlist =>
+                        playlist &&
+                        typeof playlist === 'object' &&
+                        typeof playlist.name === 'string' &&
+                        Array.isArray(playlist.songs)
+                    );
+                } else {
+                    userPlaylists = [];
+                }
                 updatePlaylistsList();
             } catch (e) {
                 console.error('Error cargando playlists:', e);
+                userPlaylists = [];
+                updatePlaylistsList();
             }
+        } else {
+            userPlaylists = [];
+            updatePlaylistsList();
         }
     }
     
@@ -1865,26 +1555,30 @@ init();
         if (navLibrary) {
             navLibrary.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Mostrar la biblioteca con pestañas (Playlists y Álbumes)
-                const filteredPlaylists = userPlaylists.filter(p => p.name !== "Canciones que me gustan");
-                showLibraryView('Playlists', filteredPlaylists, 'playlists');
-                
-                // Configurar pestañas
-                if (libraryTabs) {
-                    const tabs = libraryTabs.querySelectorAll('.lib-tab');
-                    tabs.forEach(tab => {
-                        tab.onclick = () => {
-                            tabs.forEach(t => t.classList.remove('active'));
-                            tab.classList.add('active');
-                            const tabName = tab.getAttribute('data-tab');
-                            if (tabName === 'playlists') {
-                                const filtered = userPlaylists.filter(p => p.name !== "Canciones que me gustan");
-                                showLibraryView('Playlists', filtered, 'playlists');
-                            } else if (tabName === 'albums') {
-                                showLibraryView('Álbumes', getUniqueAlbums(), 'albums');
-                            }
-                        };
-                    });
+                try {
+                    // Mostrar la biblioteca con pestañas (Playlists y Álbumes)
+                    const filteredPlaylists = getRegularPlaylists();
+                    showLibraryView('Playlists', filteredPlaylists, 'playlists');
+
+                    // Configurar pestañas
+                    if (libraryTabs) {
+                        const tabs = libraryTabs.querySelectorAll('.lib-tab');
+                        tabs.forEach(tab => {
+                            tab.onclick = () => {
+                                tabs.forEach(t => t.classList.remove('active'));
+                                tab.classList.add('active');
+                                const tabName = tab.getAttribute('data-tab');
+                                if (tabName === 'playlists') {
+                                    showLibraryView('Playlists', getRegularPlaylists(), 'playlists');
+                                } else if (tabName === 'albums') {
+                                    showLibraryView('Álbumes', getUniqueAlbums(), 'albums');
+                                }
+                            };
+                        });
+                    }
+                } catch (error) {
+                    console.error('Error abriendo Tu Biblioteca:', error);
+                    showLibraryView('Playlists', [], 'playlists');
                 }
             });
         }
@@ -2024,7 +1718,3 @@ init();
     
     init();
 });
-<<<<<<< HEAD
->>>>>>> origin/develop
-=======
->>>>>>> origin/develop
