@@ -101,11 +101,7 @@ const songs = [
     {
         id: 13,
         title: 'La Correcta',
-<<<<<<< HEAD
         artist: 'Morat y Nabález',
-=======
-        artist: 'Morat',
->>>>>>> origin/develop
         cover: 'IMG/lacorrecta.jpg',
         audio: 'audio/lacorrecta.mp3',
         favorite: false
@@ -129,11 +125,7 @@ const songs = [
     {
         id: 16,
         title: 'MANTRA',
-<<<<<<< HEAD
         artist: 'JENNIE',
-=======
-        artist: 'Jennie Kim',
->>>>>>> origin/develop
         cover: 'IMG/mantra.jpg',
         audio: 'audio/mantra.mp3',
         favorite: false
@@ -141,17 +133,13 @@ const songs = [
     {
         id: 17,
         title: 'Mi Buen Amor',
-<<<<<<< HEAD
-        artist: 'MON Laferte',
-=======
-        artist: 'Mon Laferte',
->>>>>>> origin/develop
+        artist: 'MON Lafertee',
         cover: 'IMG/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
         favorite: false
     },
-    {
-        id: 18,
+    
+    {  id: 18,
         title: 'On The Ground',
         artist: 'Rosé',
         cover: 'IMG/ontheground.jpg',
@@ -224,7 +212,7 @@ const songs = [
     },
     {
         id: 27,
-<<<<<<< HEAD
+
         title: 'No se Va',
         artist: 'Morat',
         cover: 'IMG/noseva.jpg',
@@ -569,8 +557,9 @@ const songs = [
         favorite: false
     },
 
-];
-=======
+
+    {
+        id: 70,
         title:'Ahora Me Llama',
         artist:'Karol G,Bad Bunny',
         cover: 'IMG/mellama.jpg',
@@ -579,7 +568,7 @@ const songs = [
 
     },
     {
-        id:28,
+        id:71,
         title: 'Location',
         artist:'KAROL G, Anuel AA, J. Balvin',
         cover:'IMG/location.jpg',
@@ -587,7 +576,7 @@ const songs = [
         favorite: false
     },
     {
-        id:29,
+        id:72,
         title: 'GABRIELA',
         artist:'KATSEYE',
         cover:'IMG/gabriela.jpg',
@@ -595,7 +584,7 @@ const songs = [
         favorite: false
     },
     {
-        id:30,
+        id:73,
         title: 'EL MAKINON',
         artist:'KAROL G, Mariah Angeliq',
         cover:'IMG/makinon.jpg',
@@ -603,7 +592,7 @@ const songs = [
         favorite: false
     },
     {
-        id:31,
+        id:74,
         title: '10 Mill Vidas',
         artist:'Jesse & Joy',
         cover:'IMG/10milvidas.jpg',
@@ -611,7 +600,7 @@ const songs = [
         favorite: false
     },
     {
-        id:32,
+        id:75,
         title: 'Hold On',
         artist:'Adele',
         cover:'IMG/HoldOn.jpg',
@@ -619,7 +608,7 @@ const songs = [
         favorite: false
     },
     {
-        id:33,
+        id:76,
         title: 'I Drink Wine',
         artist:'Adele',
         cover:'IMG/IDrinkWin.jpg',
@@ -627,7 +616,7 @@ const songs = [
         favorite: false
     },
     {
-        id:34,
+        id:77,
         title: 'BLove Is A Game',
         artist:'Adele',
         cover:'IMG/Love Is A Game.jpg',
@@ -635,7 +624,7 @@ const songs = [
         favorite: false
     },
     {
-        id:35,
+        id:78,
         title: 'My Little Love',
         artist:'Adele',
         cover:'IMG/My Little Love.jpg',
@@ -643,7 +632,7 @@ const songs = [
         favorite: false
     },
     {
-        id:36,
+        id:79,
         title: 'Oh My God',
         artist:'Adele',
         cover:'IMG/Oh My God.jpg',
@@ -651,7 +640,7 @@ const songs = [
         favorite: false
     },
     {
-        id:37,
+        id:80,
         title: 'Strangers By Nature',
         artist:'Adele',
         cover:'IMG/Strangers By Nature.jpg',
@@ -659,7 +648,7 @@ const songs = [
         favorite: false
     },
     {
-        id:38,
+        id:81,
         title: 'To Be Loved',
         artist:'Adele',
         cover:'IMG/To Be Loved.jpg',
@@ -667,7 +656,7 @@ const songs = [
         favorite: false
     },
     {
-        id:39,
+        id:82,
         title: 'Rolling in the Deep',
         artist:'Adele',
         cover:'IMG/Rolling in the Deep.jpg',
@@ -675,7 +664,7 @@ const songs = [
         favorite: false
     },
     {
-        id:40,
+        id:83,
         title: 'All Night Parking',
         artist:'Adele',
         cover:'IMG/allnightparking.jpg',
@@ -683,4 +672,4 @@ const songs = [
         favorite: false
     },
 ];
->>>>>>> origin/develop
+
