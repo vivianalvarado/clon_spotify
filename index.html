@@ -35,13 +35,41 @@
                         </li>
                     </ul>
                 </nav>
+               
+            <div class="sidebar-logo">
+                <i class="fa-brands fa-spotify"></i>
+                <span class="logo-text">Spotify</span>
+            </div>
+            <div class="sidebar-toggle-row">
+                <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Expandir/Contraer sidebar">
+                    <i class="fa-solid fa-chevron-right" id="sidebar-toggle-icon"></i>
+                </button>
+            </div>
+            
+            <nav class="nav-section">
+                <ul>
+                    <li><a href="#" id="nav-home" class="active"><i class="fa-solid fa-house"></i><span class="nav-text" data-i18n="nav_home">Inicio</span></a></li>
+                    <li><a href="#" id="nav-search"><i class="fa-solid fa-magnifying-glass"></i><span class="nav-text" data-i18n="nav_explore">Explorar</span></a></li>
+                </ul>
+            </nav>
 
                 <!-- Tu Biblioteca -->
                 <div class="library-sidebar">
                     <a href="#" id="nav-library" class="library-btn">
+            <div class="library-sidebar">
+                <!-- CREAR ARRIBA DE BIBLIOTECA -->
+                <button id="create-playlist-btn" class="create-btn-top">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="nav-text" data-i18n="create_playlist">Crear playlist</span>
+                </button>
+                
+                <div class="library-header-sidebar">
+                    <button id="nav-library" class="library-btn">
                         <i class="fa-solid fa-book"></i>
                         <span class="nav-text">Tu Biblioteca</span>
                     </a>
+                        <span class="nav-text" data-i18n="library_yours">Tu Biblioteca</span>
+                    </button>
                 </div>
 
                 <!-- Botón + Crear -->
@@ -71,9 +99,24 @@
                         <i class="fa-regular fa-globe"></i>
                         <span class="nav-text">Español</span>
                     </a>
+                <div class="library-playlists-preview">
+                    <div class="preview-item"><i class="fa-solid fa-heart"></i><span class="nav-text" data-i18n="likes">Tus Me Gusta</span></div>
+                    <div class="preview-item"><i class="fa-solid fa-clock"></i><span class="nav-text" data-i18n="recent">Recientes</span></div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="language-switcher" id="language-switcher">
+                    <button type="button" class="language-switcher__btn" id="lang-menu-btn" aria-expanded="false" aria-haspopup="listbox" data-i18n-aria="lang_label">
+                        <i class="fa-solid fa-globe language-switcher__globe" aria-hidden="true"></i>
+                        <span class="nav-text language-switcher__label" id="current-lang-label">Español</span>
+                        <span class="nav-text language-switcher__chevron" aria-hidden="true"><i class="fa-solid fa-chevron-up"></i></span>
+                    </button>
+                    <ul class="language-switcher__dropdown" id="lang-dropdown" role="listbox" hidden></ul>
                 </div>
             </div>
         </aside>
+        
 
         <!-- MAIN CONTENT -->
         <main class="main-content">
@@ -83,14 +126,39 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" id="search-input" placeholder="¿Qué quieres reproducir?">
                 </div>
+                <div class="top-bar-spacer" aria-hidden="true"></div>
+                <div class="top-bar-center">
+                    <button type="button" class="top-bar-home-btn" id="top-bar-home" data-i18n-aria="top_home_aria" aria-label="Inicio">
+                        <i class="fa-solid fa-house"></i>
+                    </button>
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-box__icon" aria-hidden="true"></i>
+                        <input type="text" id="search-input" data-i18n="search_ph" placeholder="¿Qué quieres reproducir?" autocomplete="off">
+                        <span class="search-box__divider" aria-hidden="true"></span>
+                        <button type="button" class="search-box__browse-btn" id="search-browse-btn" data-i18n-aria="browse_aria" aria-label="Explorar categorías">
+                            <i class="fa-solid fa-table-cells-large" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="user-menu">
+                    <button class="user-btn"><i class="fa-regular fa-user"></i><span data-i18n="user_btn">Usuario</span><i class="fa-solid fa-chevron-down"></i></button>
+                </div>
             </header>
             
             <section class="content">
-                <div class="greeting-section">
+                <!-- FILTROS -->
+                <div class="filter-tabs" id="filter-tabs">
+                    <button class="filter-tab active" data-filter="all" data-i18n="tab_all">Todo</button>
+                    <button class="filter-tab" data-filter="music" data-i18n="tab_music">Música</button>
+                    <button class="filter-tab" data-filter="artists" data-i18n="tab_artists">Artistas</button>
+                </div>
+                
+                <div class="greeting-section" id="greeting-section">
                     <h1 id="section-title">Buenas tardes</h1>
                 </div>
                 
                 <!-- Contenedor de tarjetas de canciones -->
+                <!-- CONTENIDO PRINCIPAL (canciones) -->
                 <div class="card-container" id="card-container"></div>
                 
                 <!-- Vista de Biblioteca (Playlists y Álbumes) -->
@@ -100,17 +168,37 @@
                             <i class="fa-solid fa-arrow-left"></i> Volver
                         </button>
                         <h2 id="library-view-title">Tu Biblioteca</h2>
+                <!-- VISTA DE EXPLORAR (géneros) - Se muestra al hacer clic en Buscar -->
+                <div class="explore-container" id="explore-container" style="display: none;">
+                    <h2 class="explore-title" data-i18n="explore_all">Explorar todo</h2>
+                    <div class="genres-grid" id="genres-grid"></div>
+                </div>
+                
+                <!-- Vista de Artistas -->
+                <div class="artists-container" id="artists-container" style="display: none;">
+                    <h2 class="section-subtitle" data-i18n="section_artists">Artistas</h2>
+                    <div class="artists-grid" id="artists-grid"></div>
+                </div>
+                
+                <!-- Resto del contenido... -->
+                <div class="library-container" id="library-container" style="display: none;">
+                    <div class="library-header">
+                        <h2><i class="fa-solid fa-book"></i> <span data-i18n="library_header">Tu Biblioteca</span></h2>
+                        <button id="close-library" class="close-library-btn"><i class="fa-solid fa-xmark"></i></button>
                     </div>
                     <div class="library-tabs" id="library-tabs">
                         <button class="lib-tab active" data-tab="playlists">Playlists</button>
                         <button class="lib-tab" data-tab="albums">Álbumes</button>
+                    <div class="library-tabs">
+                        <button class="lib-tab active" data-tab="playlists" data-i18n="lib_playlists">Playlists</button>
+                        <button class="lib-tab" data-tab="artists" data-i18n="lib_artists">Artistas</button>
                     </div>
                     <div class="library-grid-view" id="library-grid-container"></div>
                 </div>
                 
                 <div id="no-results" class="no-results-container" style="display: none;">
                     <i class="fa-solid fa-circle-exclamation"></i>
-                    <p>No se encontraron resultados</p>
+                    <p data-i18n="no_results">No se encontraron resultados</p>
                 </div>
             </section>
         </main>
@@ -118,9 +206,9 @@
         <!-- RIGHT PANEL -->
         <aside class="right-panel">
             <div class="now-playing-card">
-                <div class="now-playing-header"><i class="fa-solid fa-chart-simple"></i><span>EN REPRODUCCIÓN</span></div>
+                <div class="now-playing-header"><i class="fa-solid fa-chart-simple"></i><span data-i18n="now_playing">EN REPRODUCCIÓN</span></div>
                 <div class="album-art-large">
-                    <img id="panel-album-img" src="https://via.placeholder.com/200" alt="Portada">
+                    <img id="panel-album-img" src="https://via.placeholder.com/200" data-i18n-alt="cover_alt" alt="Portada">
                     <div class="album-overlay"><i class="fa-solid fa-play"></i></div>
                 </div>
                 <div class="track-details">
@@ -140,6 +228,8 @@
                         <span>No hay canciones en cola</span>
                     </div>
                 </div>
+                <p class="queue-title"><i class="fa-solid fa-list-ul"></i> <span data-i18n="queue_title">Cola de reproducción</span></p>
+                <div id="queue-list" class="queue-list"></div>
             </div>
         </aside>
 
@@ -196,7 +286,31 @@
         </div>
     </div>
 
+    <div id="playlist-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Crear nueva playlist</h2>
+            <button id="close-modal-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="playlist-form-container">
+                <div class="playlist-img-placeholder">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <div class="playlist-inputs">
+                    <input type="text" id="new-playlist-name" placeholder="Añade un nombre">
+                    <textarea id="new-playlist-desc" placeholder="Añade una descripción opcional"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="save-playlist-btn" class="btn-spotify-primary">Guardar</button>
+        </div>
+    </div>
+</div>
     <script src="js/data.js"></script>
+    <script src="js/idiomas.js"></script>
     <script src="js/app.js"></script>
+
 </body>
 </html>
