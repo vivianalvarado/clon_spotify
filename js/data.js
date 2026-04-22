@@ -133,17 +133,13 @@ const songs = [
     {
         id: 17,
         title: 'Mi Buen Amor',
-<<<<<<< Updated upstream
         artist: 'Mon Laferte',
-=======
-        artist: 'MON Lafertee',
->>>>>>> Stashed changes
         cover: 'IMG/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
         favorite: false
     },
-    
-    {  id: 18,
+    {
+        id: 18,
         title: 'On The Ground',
         artist: 'Rosé',
         cover: 'IMG/ontheground.jpg',
@@ -216,10 +212,6 @@ const songs = [
     },
     {
         id: 27,
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         title: 'No se Va',
         artist: 'Morat',
         cover: 'IMG/noseva.jpg',
@@ -562,29 +554,16 @@ const songs = [
         audio: 'audio/rapunzel.mp3',
         favorite: false
     },
-<<<<<<< Updated upstream
     {
         id: 70,
         title: 'Ahora Me Llama',
         artist: 'Karol G, Bad Bunny',
-=======
-
-
-    {
-        id: 70,
-        title:'Ahora Me Llama',
-        artist:'Karol G,Bad Bunny',
->>>>>>> Stashed changes
         cover: 'IMG/mellama.jpg',
         audio: 'audio/mellama.mp3',
         favorite: true
     },
     {
-<<<<<<< Updated upstream
         id: 71,
-=======
-        id:71,
->>>>>>> Stashed changes
         title: 'Location',
         artist: 'KAROL G, Anuel AA, J. Balvin',
         cover: 'IMG/location.jpg',
@@ -592,11 +571,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 72,
-=======
-        id:72,
->>>>>>> Stashed changes
         title: 'GABRIELA',
         artist: 'KATSEYE',
         cover: 'IMG/gabriela.jpg',
@@ -604,7 +579,6 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 73,
         title: 'EL MAKINON',
         artist: 'KAROL G, Mariah Angeliq',
@@ -614,17 +588,6 @@ const songs = [
     },
     {
         id: 74,
-=======
-        id:73,
-        title: 'Blank Space',
-        artist:'Taylor Swift ',
-        cover:'IMG/Blank_Space.jpg',
-        audio:'audio/Blank_Space.mp3',
-        favorite: false
-    },
-    {
-        id:74,
->>>>>>> Stashed changes
         title: '10 Mill Vidas',
         artist: 'Jesse & Joy',
         cover: 'IMG/10milvidas.jpg',
@@ -632,11 +595,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 75,
-=======
-        id:75,
->>>>>>> Stashed changes
         title: 'Hold On',
         artist: 'Adele',
         cover: 'IMG/HoldOn.jpg',
@@ -644,11 +603,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 76,
-=======
-        id:76,
->>>>>>> Stashed changes
         title: 'I Drink Wine',
         artist: 'Adele',
         cover: 'IMG/IDrinkWin.jpg',
@@ -656,7 +611,6 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 77,
         title: 'Love Is A Game',
         artist: 'Adele',
@@ -666,17 +620,6 @@ const songs = [
     },
     {
         id: 78,
-=======
-        id:77,
-        title: 'BLove Is A Game',
-        artist:'Adele',
-        cover:'IMG/Love Is A Game.jpg',
-        audio:'audio/Adele - Love Is A Game (Official Lyric Video)(MP3_160K).mp3',
-        favorite: false
-    },
-    {
-        id:78,
->>>>>>> Stashed changes
         title: 'My Little Love',
         artist: 'Adele',
         cover: 'IMG/My Little Love.jpg',
@@ -684,11 +627,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 79,
-=======
-        id:79,
->>>>>>> Stashed changes
         title: 'Oh My God',
         artist: 'Adele',
         cover: 'IMG/Oh My God.jpg',
@@ -696,11 +635,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 80,
-=======
-        id:80,
->>>>>>> Stashed changes
         title: 'Strangers By Nature',
         artist: 'Adele',
         cover: 'IMG/Strangers By Nature.jpg',
@@ -708,11 +643,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 81,
-=======
-        id:81,
->>>>>>> Stashed changes
         title: 'To Be Loved',
         artist: 'Adele',
         cover: 'IMG/To Be Loved.jpg',
@@ -720,11 +651,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 82,
-=======
-        id:82,
->>>>>>> Stashed changes
         title: 'Rolling in the Deep',
         artist: 'Adele',
         cover: 'IMG/Rolling in the Deep.jpg',
@@ -732,65 +659,14 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 83,
-=======
-        id:83,
->>>>>>> Stashed changes
         title: 'All Night Parking',
         artist: 'Adele',
         cover: 'IMG/allnightparking.jpg',
         audio: 'audio/AllNightParking.mp3',
         favorite: false
-<<<<<<< Updated upstream
     }
 ];
 
 console.log('✅ data.js cargado correctamente');
 console.log('📀 Canciones disponibles:', songs.length);
-=======
-    },
-    {
-        id:84,
-        title: 'Fifteen',
-        artist:'Taylor Swiftf',
-        cover:'IMG/fifteen.jpg',
-        audio:'audio/fifteen.mp3',
-        favorite: false
-    },
-    {
-        id:85,
-        title: 'Delicate',
-        artist:'Taylor Swift',
-        cover:'IMG/Delicate.jpg',
-        audio:'audio/Delicate.mp3',
-        favorite: false
-    },
-    {
-        id:86,
-        title: 'Feliz Navidad',
-        artist:'José Feliciano',
-        cover:'IMG/feliz.jpg',
-        audio:'audio/feliz.mp3',
-        favorite: false
-    },
-    {
-        id: 87,
-        title:'Los Peces En El Rio',
-        artist:'Villancicos',
-        cover:'IMG/Los Peces En El Rio.jpg',
-        audio:'audio/Los Peces En El Rio.mp3',
-        favorite: false
-    },
-    {
-        id:88,
-        title: 'If Only',
-        artist:'Dove Cameron',
-        cover:'IMG/La Santa.jpg',
-        audio:'audio/La Santa.mp3',
-        favorite: false
-    }
-
-];
-
->>>>>>> Stashed changes
