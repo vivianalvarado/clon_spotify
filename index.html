@@ -16,11 +16,6 @@
                 <i class="fa-brands fa-spotify"></i>
                 <span class="logo-text">Spotify</span>
             </div>
-            <div class="sidebar-toggle-row">
-                <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Expandir/Contraer sidebar">
-                    <i class="fa-solid fa-chevron-right" id="sidebar-toggle-icon"></i>
-                </button>
-            </div>
             
             <nav class="nav-section">
                 <ul>
@@ -47,6 +42,7 @@
                     <div class="preview-item"><i class="fa-solid fa-heart"></i><span class="nav-text" data-i18n="likes">Tus Me Gusta</span></div>
                     <div class="preview-item"><i class="fa-solid fa-clock"></i><span class="nav-text" data-i18n="recent">Recientes</span></div>
                 </div>
+                <div id="playlistsContainer"></div>
             </div>
             
             <div class="sidebar-footer">
@@ -129,6 +125,21 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Vista de Biblioteca compatible con app.js -->
+                <div class="library-view" id="library-view" style="display: none;">
+                    <div class="library-view-header">
+                        <button class="back-to-home-btn" id="back-to-home-btn">
+                            <i class="fa-solid fa-arrow-left"></i> Volver
+                        </button>
+                        <h2 id="library-view-title">Tu Biblioteca</h2>
+                    </div>
+                    <div class="library-tabs" id="library-tabs">
+                        <button class="lib-tab active" data-tab="playlists">Playlists</button>
+                        <button class="lib-tab" data-tab="albums">Álbumes</button>
+                    </div>
+                    <div class="library-grid-view" id="library-grid-container"></div>
+                </div>
                 
                 <div id="no-results" class="no-results-container" style="display: none;">
                     <i class="fa-solid fa-circle-exclamation"></i>
@@ -184,6 +195,7 @@
                     <span id="current-time">0:00</span>
                     <div class="progress-bar-container" id="progress-bar-bg">
                         <div class="progress-fill" id="progress-fill"></div>
+                        <div class="progress-handle"></div>
                     </div>
                     <span id="total-duration">0:00</span>
                 </div>
@@ -199,11 +211,28 @@
             </div>
         </footer>
     </div>
+<<<<<<< HEAD
     <div class="filter-chips">
     <button onclick="mostrarMasEscuchados()">🔥 Tendencias</button>
     <button onclick="filtrarPorGenero('K-pop')">✨ K-pop</button>
     <button onclick="filtrarPorGenero('Pop')">🎵 Pop</button>
 </div>
+=======
+
+    <!-- Modal para crear playlist -->
+    <div class="modal-overlay" id="playlistModal">
+        <div class="modal-container">
+            <h2><i class="fa-solid fa-plus-circle"></i> Crear playlist</h2>
+            <p>Dale un nombre a tu nueva playlist</p>
+            <input type="text" class="modal-input" id="playlistNameInput" placeholder="Ej: Mis favoritos, Rock 2024..." autocomplete="off">
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" id="cancelModalBtn">Cancelar</button>
+                <button class="modal-btn modal-btn-create" id="confirmCreateBtn">Crear</button>
+            </div>
+        </div>
+    </div>
+
+>>>>>>> origin/develop
     <script src="js/data.js"></script>
     <script src="js/idiomas.js"></script>
     <script src="js/app.js"></script>
