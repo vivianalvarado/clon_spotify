@@ -112,6 +112,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const miniPrevBtn = document.getElementById('mini-prev-btn');
     const miniNextBtn = document.getElementById('mini-next-btn');
     const fullscreenBtn = document.getElementById('fullscreen-btn');
+    
+    // elemento para letras 
+    const lyricsBtn = document.getElementById('lyrics-btn');
 
     // Elementos para Conectar Dispositivo
     const connectDeviceBtn = document.getElementById('connect-device-btn');
@@ -158,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             bottom: 100px;
             right: 20px;
-            background: ${isError ? '#e74c3c' : '#1db954'};
+            background: ${isError ? '#e74c3c' : '#9b4dff'};
             color: ${isError ? '#fff' : '#000'};
             padding: 12px 20px;
             border-radius: 8px;
@@ -1041,7 +1044,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updateLikeButton(song) {
-        const likedIcon = '<i class="fa-solid fa-heart" style="color: #1db954;"></i>';
+        const likedIcon = '<i class="fa-solid fa-heart" style="color: #9b4dff;"></i>';
         const unlikedIcon = '<i class="fa-regular fa-heart"></i>';
 
         if (song && song.favorite) {
@@ -1150,6 +1153,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (progressFill) progressFill.style.width = `${progress}%`;
             if (currentTimeSpan) currentTimeSpan.textContent = formatTime(audioPlayer.currentTime);
             if (totalDurationSpan) totalDurationSpan.textContent = formatTime(audioPlayer.duration);
+
+            // 🔥 NUEVO: Mover la bolita (handle) con el progreso
+            const handle = document.querySelector('.progress-handle');
+            if (handle) {
+                // La bolita se coloca en el porcentaje exacto del progreso
+                handle.style.left = `${progress}%`;
+            }
+        }
+
+        if (typeof updateLyricsLine === 'function') {
+            updateLyricsLine();
         }
     }
     
@@ -1180,13 +1194,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function toggleShuffle() {
         isShuffle = !isShuffle;
-        if (shuffleBtn) shuffleBtn.style.color = isShuffle ? '#1db954' : '#b3b3b3';
+        if (shuffleBtn) shuffleBtn.style.color = isShuffle ? '#9b4dff' : '#b3b3b3';
         showNotification(isShuffle ? '🔀 Modo aleatorio activado' : 'Modo aleatorio desactivado');
     }
     
     function toggleRepeat() {
         isRepeat = !isRepeat;
-        if (repeatBtn) repeatBtn.style.color = isRepeat ? '#1db954' : '#b3b3b3';
+        if (repeatBtn) repeatBtn.style.color = isRepeat ? '#9b4dff' : '#b3b3b3';
         showNotification(isRepeat ? '🔁 Repetición activada' : 'Repetición desactivada');
     }
     
@@ -1413,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', function() {
             likedPreview.className = 'preview-item';
             likedPreview.id = 'liked-songs-preview';
             likedPreview.innerHTML = `
-                <i class="fa-solid fa-heart" style="color: #1db954;"></i>
+                <i class="fa-solid fa-heart" style="color: #9b4dff;"></i>
                 <span>Canciones que me gustan</span>
             `;
             likedPreview.onclick = () => {
@@ -1728,6 +1742,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
+
+        if (lyricsBtn) {
+            lyricsBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentSong = songs[currentSongIndex];
+                if (currentSong) {
+                    openLyrics(currentSong);  // ← Función de lyrics.js
+                } else {
+                    showNotification('Selecciona una canción primero', true);
+                }
+            });
+        }
         
         audioPlayer.addEventListener('timeupdate', updateProgress);
         audioPlayer.addEventListener('ended', () => {
@@ -1975,6 +2001,10 @@ function setupConnectDeviceEvents() {
         loadSavedPlaylists();
         updateLikedSongsCounter();
         showHomeView();
+
+        console.log('🎤 lyricsBtn:', lyricsBtn);
+        console.log('📝 openLyrics:', typeof openLyrics);
+        console.log('🔄 updateLyricsLine:', typeof updateLyricsLine);
         
         console.log('✅ App lista!');
     }
