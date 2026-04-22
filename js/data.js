@@ -603,11 +603,7 @@ const songs = [
         favorite: false
     },
     {
-<<<<<<< Updated upstream
         id: 76,
-=======
-        id:76,
->>>>>>> Stashed changes
         title: 'I Drink Wine',
         artist: 'Adele',
         cover: 'IMG/IDrinkWin.jpg',
@@ -624,18 +620,6 @@ const songs = [
     },
     {
         id: 78,
-<<<<<<< Updated upstream
-=======
-        id:77,
-        title: 'BLove Is A Game',
-        artist:'Adele',
-        cover:'IMG/Love Is A Game.jpg',
-        audio:'audio/Adele - Love Is A Game (Official Lyric Video)(MP3_160K).mp3',
-        favorite: false
-    },
-    {
-        id:78,
->>>>>>> Stashed changes
         title: 'My Little Love',
         artist: 'Adele',
         cover: 'IMG/My Little Love.jpg',
@@ -680,6 +664,46 @@ const songs = [
         artist: 'Adele',
         cover: 'IMG/allnightparking.jpg',
         audio: 'audio/AllNightParking.mp3',
+        favorite: false
+    },
+    {
+        id:84,
+        title: 'Fifteen',
+        artist:'Taylor Swiftf',
+        cover:'IMG/fifteen.jpg',
+        audio:'audio/fifteen.mp3',
+        favorite: false
+    },
+    {
+        id:85,
+        title: 'Delicate',
+        artist:'Taylor Swift',
+        cover:'IMG/Delicate.jpg',
+        audio:'audio/Delicate.mp3',
+        favorite: false
+    },
+    {
+        id:86,
+        title: 'Feliz Navidad',
+        artist:'José Feliciano',
+        cover:'IMG/feliz.jpg',
+        audio:'audio/feliz.mp3',
+        favorite: false
+    },
+    {
+        id: 87,
+        title:'Los Peces En El Rio',
+        artist:'Villancicos',
+        cover:'IMG/Los Peces En El Rio.jpg',
+        audio:'audio/Los Peces En El Rio.mp3',
+        favorite: false
+    },
+    {
+        id:88,
+        title: 'If Only',
+        artist:'Dove Cameron',
+        cover:'IMG/if only.jpg',
+        audio:'audio/if only.mp3',
         favorite: false
     }
 ];
