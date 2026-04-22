@@ -1,793 +1,670 @@
+// Datos de las canciones
+// Corregido y actualizado
+
 const songs = [
     {
         id: 1,
-        title: 'Amandote',
+        title: 'Amándote',
         artist: 'Anna Carina',
-        artistImage: 'img/artistas/amandote.jpg',
-        cover: 'img/amandote.jpg',
+        cover: 'IMG/amandote.jpg',
         audio: 'audio/amandote.mp3',
-        favorite: false,
-        album: 'Amandote'
+        favorite: false
     },
     {
         id: 2,
-        title: 'Amarrame',
+        title: 'Amárrame',
         artist: 'Mon Laferte',
-        artistImage: 'img/artistas/amarrame.jpg',
-        cover: 'img/amarrame.jpg',
+        cover: 'IMG/amarrame.jpg',
         audio: 'audio/amarrame.mp3',
-        favorite: false,
-        album: 'Amarrame'
+        favorite: false
     },
     {
         id: 3,
-        title: 'Amor Con Hielo',
+        title: 'Amor con Hielo',
         artist: 'Morat',
-        artistImage: 'img/artistas/amorconhielo.jpg',
-        cover: 'img/amorconhielo.jpg',
+        cover: 'IMG/amorconhielo.jpg',
         audio: 'audio/amorconhielo.mp3',
-        favorite: false,
-        album: 'Amor Con Hielo'
+        favorite: false
     },
     {
         id: 4,
         title: 'Butter',
         artist: 'BTS',
-        artistImage: 'img/artistas/butter.jpg',
-        cover: 'img/butter.jpg',
+        cover: 'IMG/butter.jpg',
         audio: 'audio/butter.mp3',
-        favorite: false,
-        album: 'Butter'
+        favorite: false
     },
     {
         id: 5,
         title: 'Consejos de Amor',
-        artist: 'Morat ft. TINI',
-        artistImage: 'img/artistas/consejosdeamor.jpg',
-        cover: 'img/consejosdeamor.jpg',
+        artist: 'Morat, Tini',
+        cover: 'IMG/consejosdeamor.jpg',
         audio: 'audio/consejosdeamor.mp3',
-        favorite: false,
-        album: 'Cupido'
+        favorite: false
     },
     {
         id: 6,
         title: 'Cuando Nadie Ve',
         artist: 'Morat',
-        artistImage: 'img/artistas/cuandonadieve.jpg',
-        cover: 'img/cuandonadieve.jpg',
+        cover: 'IMG/cuandonadieve.jpg',
         audio: 'audio/cuandonadieve.mp3',
-        favorite: false,
-        album: 'Balas Perdidas'
+        favorite: false
     },
     {
         id: 7,
         title: 'Dynamite',
         artist: 'BTS',
-        artistImage: 'img/artistas/dynamite.jpg',
-        cover: 'img/dynamite.jpg',
+        cover: 'IMG/dynamite.jpg',
         audio: 'audio/dynamite.mp3',
-        favorite: false,
-        album: 'BE'
+        favorite: false
     },
     {
         id: 8,
-        title: 'En Guerra',
-        artist: 'Sebastian Yatra ft. Camilo',
-        artistImage: 'img/artistas/enguerra.jpg',
-        cover: 'img/enguerra.jpg',
+        title: 'Besos en Guerra',
+        artist: 'Morat',
+        cover: 'IMG/besosenguerra.jpg',
         audio: 'audio/enguerra.mp3',
-        favorite: false,
-        album: 'Fantasia'
+        favorite: false
     },
     {
         id: 9,
         title: 'Forever Young',
         artist: 'BLACKPINK',
-        artistImage: 'img/artistas/foreveryoung.jpg',
-        cover: 'img/foreveryoung.jpg',
+        cover: 'IMG/foreveryoung.jpg',
         audio: 'audio/foreveryoung.mp3',
-        favorite: false,
-        album: 'Square Up'
+        favorite: false
     },
     {
         id: 10,
         title: 'How You Like That',
         artist: 'BLACKPINK',
-        artistImage: 'img/artistas/howyoulikethat.jpg',
-        cover: 'img/howyoulikethat.jpg',
+        cover: 'IMG/howyoulikethat.jpg',
         audio: 'audio/howyoulikethat.mp3',
-        favorite: false,
-        album: 'The Album'
+        favorite: false
     },
     {
         id: 11,
         title: 'Idol',
         artist: 'BTS',
-        artistImage: 'img/artistas/idol.jpg',
-        cover: 'img/idol.jpg',
+        cover: 'IMG/idol.jpg',
         audio: 'audio/idol.mp3',
-        favorite: false,
-        album: 'Love Yourself: Answer'
+        favorite: false
     },
     {
         id: 12,
         title: 'Kill This Love',
         artist: 'BLACKPINK',
-        artistImage: 'img/artistas/killthislove.jpg',
-        cover: 'img/killthislove.jpg',
+        cover: 'IMG/killthislove.jpg',
         audio: 'audio/killthislove.mp3',
-        favorite: false,
-        album: 'Kill This Love'
+        favorite: false
     },
     {
         id: 13,
         title: 'La Correcta',
-        artist: 'Nabález ft. Morat',
-        artistImage: 'img/artistas/lacorrecta.jpg',
-        cover: 'img/lacorrecta.jpg',
+        artist: 'Morat y Nabález',
+        cover: 'IMG/lacorrecta.jpg',
         audio: 'audio/lacorrecta.mp3',
-        favorite: false,
-        album: 'La Correcta'
+        favorite: false
     },
     {
         id: 14,
-        title: 'Lalisa',
+        title: 'LALISA',
         artist: 'Lisa',
-        artistImage: 'img/artistas/lalisa.jpg',
-        cover: 'img/lalisa.jpg',
+        cover: 'IMG/lalisa.jpg',
         audio: 'audio/lalisa.mp3',
-        favorite: false,
-        album: 'Lalisa'
+        favorite: false
     },
     {
         id: 15,
         title: 'Lovesick Girls',
         artist: 'BLACKPINK',
-        artistImage: 'img/artistas/lovesickgirls.jpg',
-        cover: 'img/lovesickgirls.jpg',
+        cover: 'IMG/lovesickgirls.jpg',
         audio: 'audio/lovesickgirls.mp3',
-        favorite: false,
-        album: 'The Album'
+        favorite: false
     },
     {
         id: 16,
-        title: 'Mantra',
-        artist: 'Jennie',
-        artistImage: 'img/artistas/mantra.jpg',
-        cover: 'img/mantra.jpg',
+        title: 'MANTRA',
+        artist: 'JENNIE',
+        cover: 'IMG/mantra.jpg',
         audio: 'audio/mantra.mp3',
-        favorite: false,
-        album: 'Mantra'
+        favorite: false
     },
     {
         id: 17,
         title: 'Mi Buen Amor',
         artist: 'Mon Laferte',
-        artistImage: 'img/artistas/mibuenamor.jpg',
-        cover: 'img/mibuenamor.jpg',
+        cover: 'IMG/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
-        favorite: false,
-        album: 'La Trenza'
+        favorite: false
     },
     {
         id: 18,
         title: 'On The Ground',
         artist: 'Rosé',
-        artistImage: 'img/artistas/ontheground.jpg',
-        cover: 'img/ontheground.jpg',
+        cover: 'IMG/ontheground.jpg',
         audio: 'audio/ontheground.mp3',
-        favorite: false,
-        album: 'R'
+        favorite: false
     },
     {
         id: 19,
         title: 'Pink Venom',
         artist: 'BLACKPINK',
-        artistImage: 'img/artistas/pinkvenom.jpg',
-        cover: 'img/pinkvenom.jpg',
+        cover: 'IMG/pinkvenom.jpg',
         audio: 'audio/pinkvenom.mp3',
-        favorite: false,
-        album: 'Born Pink'
+        favorite: false
     },
     {
         id: 20,
         title: 'Presiento',
-        artist: 'Morat ft. Aitana',
-        artistImage: 'img/artistas/presiento.jpg',
-        cover: 'img/presiento.jpg',
+        artist: 'Morat',
+        cover: 'IMG/presiento.jpg',
         audio: 'audio/presiento.mp3',
-        favorite: false,
-        album: 'Balas Perdidas'
+        favorite: false
     },
     {
         id: 21,
         title: 'Rockstar',
         artist: 'Lisa',
-        artistImage: 'img/artistas/rockstar.jpg',
-        cover: 'img/rockstar.jpg',
+        cover: 'IMG/rockstar.jpg',
         audio: 'audio/rockstar.mp3',
-        favorite: false,
-        album: 'Rockstar'
+        favorite: false
     },
     {
         id: 22,
         title: 'Seven',
         artist: 'Jungkook',
-        artistImage: 'img/artistas/seven.jpg',
-        cover: 'img/seven.jpg',
+        cover: 'IMG/seven.jpg',
         audio: 'audio/seven.mp3',
-        favorite: false,
-        album: 'Golden'
+        favorite: false
     },
     {
         id: 23,
         title: 'Solo',
         artist: 'Jennie',
-        artistImage: 'img/artistas/solo.jpg',
-        cover: 'img/solo.jpg',
+        cover: 'IMG/solo.jpg',
         audio: 'audio/solo.mp3',
-        favorite: false,
-        album: 'Solo'
+        favorite: false
     },
     {
         id: 24,
         title: 'Sour Candy',
-        artist: 'Lady Gaga ft. BLACKPINK',
-        artistImage: 'img/artistas/sourcandy.jpg',
-        cover: 'img/sourcandy.jpg',
+        artist: 'Lady Gaga & BLACKPINK',
+        cover: 'IMG/sourcandy.jpg',
         audio: 'audio/sourcandy.mp3',
-        favorite: false,
-        album: 'Chromatica'
+        favorite: false
     },
     {
         id: 25,
         title: 'Tu Falta de Querer',
         artist: 'Mon Laferte',
-        artistImage: 'img/artistas/tufaltadequerer.jpg',
-        cover: 'img/tufaltadequerer.jpg',
+        cover: 'IMG/tufaltadequerer.jpg',
         audio: 'audio/tufaltadequerer.mp3',
-        favorite: false,
-        album: 'Mon Laferte Vol. 1'
+        favorite: false
     },
     {
         id: 26,
         title: 'Vas a Querer Volver',
         artist: 'Maite Perroni',
-        artistImage: 'img/artistas/vasaquerervolver.jpg',
-        cover: 'img/vasaquerervolver.jpg',
+        cover: 'IMG/vasaquerervolver.jpg',
         audio: 'audio/vasaquerervolver.mp3',
-        favorite: false,
-        album: 'Eclipse de Luna'
+        favorite: false
     },
     {
         id: 27,
         title: 'No se Va',
         artist: 'Morat',
-        artistImage: 'img/artistas/noseva.jpg',
-        cover: 'img/noseva.jpg',
+        cover: 'IMG/noseva.jpg',
         audio: 'audio/noseva.mp3',
-        favorite: false,
-        album: 'Balas Perdidas'
+        favorite: false
     },
     {
         id: 28,
         title: 'TQG',
         artist: 'Karol G, Shakira',
-        artistImage: 'img/artistas/tqg.jpg',
-        cover: 'img/tqg.jpg',
+        cover: 'IMG/tqg.jpg',
         audio: 'audio/tqg.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        favorite: false
     },
     {
         id: 29,
         title: 'Paloma Ajena',
         artist: 'Agua Marina',
-        artistImage: 'img/artistas/palomajena.jpg',
-        cover: 'img/palomajena.jpg',
+        cover: 'IMG/palomajena.jpg',
         audio: 'audio/palomajena.mp3',
-        favorite: false,
-        album: 'Paloma Ajena'
+        favorite: false
     },
     {
         id: 30,
         title: 'Tu Boda y Yo',
         artist: 'Corazon Serrano',
-        artistImage: 'img/artistas/tubodayyo.jpg',
-        cover: 'img/tubodayyo.jpg',
+        cover: 'IMG/tubodayyo.jpg',
         audio: 'audio/tubodayyo.mp3',
-        favorite: false,
-        album: 'Tu Boda y Yo'
+        favorite: false
     },
     {
         id: 31,
         title: 'Sejodioto',
         artist: 'Karol G',
-        artistImage: 'img/artistas/sejodioto.jpg',
-        cover: 'img/sejodioto.jpg',
+        cover: 'IMG/sejodioto.jpg',
         audio: 'audio/sejodioto.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        favorite: false
     },
     {
         id: 32,
         title: 'Pineapple',
         artist: 'Karol G, Becky G',
-        artistImage: 'img/artistas/pineapple.jpg',
-        cover: 'img/pineapple.jpg',
+        cover: 'IMG/pineapple.jpg',
         audio: 'audio/pineapple.mp3',
-        favorite: false,
-        album: 'Ocean'
+        favorite: false
     },
     {
         id: 33,
         title: 'El Makinon',
         artist: 'Karol G',
-        artistImage: 'img/artistas/makinon.jpg',
-        cover: 'img/makinon.jpg',
+        cover: 'IMG/makinon.jpg',
         audio: 'audio/makinon.mp3',
-        favorite: false,
-        album: 'KG0516'
+        favorite: false
     },
     {
         id: 34,
         title: 'Provenza',
         artist: 'Karol G',
-        artistImage: 'img/artistas/provenza.jpg',
-        cover: 'img/provenza.jpg',
+        cover: 'IMG/provenza.jpg',
         audio: 'audio/provenza.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        favorite: false
     },
     {
         id: 35,
         title: 'Mi Cama',
         artist: 'Karol G',
-        artistImage: 'img/artistas/micama.jpg',
-        cover: 'img/micama.jpg',
+        cover: 'IMG/micama.jpg',
         audio: 'audio/micama.mp3',
-        favorite: false,
-        album: 'Unstoppable'
+        favorite: false
     },
     {
         id: 36,
         title: 'Gatúbela',
         artist: 'Karol G, Maldy',
-        artistImage: 'img/artistas/gatubela.jpg',
-        cover: 'img/gatubela.jpg',
+        cover: 'IMG/gatubela.jpg',
         audio: 'audio/gatubela.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        favorite: false
     },
     {
         id: 37,
         title: 'Ahora Me Llama',
         artist: 'Karol G, Bad Bunny',
-        artistImage: 'img/artistas/ahoramellama.jpg',
-        cover: 'img/ahoramellama.jpg',
+        cover: 'IMG/ahoramellama.jpg',
         audio: 'audio/ahoramellama.mp3',
-        favorite: true,
-        album: 'Unstoppable'
+        favorite: false
     },
     {
         id: 38,
         title: 'Mamii',
         artist: 'Karol G, Becky G',
-        artistImage: 'img/artistas/mamii.jpg',
-        cover: 'img/mamii.jpg',
+        cover: 'IMG/mamii.jpg',
         audio: 'audio/mamii.mp3',
-        favorite: false,
-        album: 'KG0516'
+        favorite: false
     },
     {
         id: 39,
         title: 'Si Antes Te Hubiera Conocido',
         artist: 'Karol G',
-        artistImage: 'img/artistas/si.jpg',
-        cover: 'img/si.jpg',
+        cover: 'IMG/si.jpg',
         audio: 'audio/si.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        favorite: false
     },
     {
         id: 40,
-        title: 'Amargura',
+        title: 'Mix Amargura',
         artist: 'Karol G',
-        artistImage: 'img/artistas/amargura.jpg',
-        cover: 'img/amargura.jpg',
-        audio: 'audio/amargura.mp3',
-        favorite: false,
-        album: 'KG0516'
+        cover: 'IMG/mixamargura.jpg',
+        audio: 'audio/mixamargura.mp3',
+        favorite: false
     },
     {
         id: 41,
-        title: 'MI EX TENÍA RAZÓN',
+        title: 'Amargura',
         artist: 'Karol G',
-        artistImage: 'img/artistas/miex.jpg',
-        cover: 'img/miex.jpg',
-        audio: 'audio/miex.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        cover: 'IMG/mixamargura.jpg',
+        audio: 'audio/amargura.mp3',
+        favorite: false
     },
     {
         id: 42,
-        title: 'Culpables',
-        artist: 'Karol G, Anuel AA',
-        artistImage: 'img/artistas/culpables.jpg',
-        cover: 'img/culpables.jpg',
-        audio: 'audio/culpables.mp3',
-        favorite: false,
-        album: 'Unstoppable'
+        title: 'MI EX TENÍA RAZÓN',
+        artist: 'Karol G',
+        cover: 'IMG/miex.jpg',
+        audio: 'audio/miex.mp3',
+        favorite: false
     },
     {
         id: 43,
-        title: 'El Barco',
-        artist: 'Karol G',
-        artistImage: 'img/artistas/elbarco.jpg',
-        cover: 'img/elbarco.jpg',
-        audio: 'audio/elbarco.mp3',
-        favorite: false,
-        album: 'Unstoppable'
+        title: 'Culpables',
+        artist: 'Karol G, Anuel AA',
+        cover: 'IMG/culpables.jpg',
+        audio: 'audio/culpables.mp3',
+        favorite: false
     },
     {
         id: 44,
-        title: 'Créeme',
-        artist: 'Karol G, Maluma',
-        artistImage: 'img/artistas/creeme.jpg',
-        cover: 'img/creeme.jpg',
-        audio: 'audio/creeme.mp3',
-        favorite: false,
-        album: 'Ocean'
+        title: 'El Barco',
+        artist: 'Karol G',
+        cover: 'IMG/elbarco.jpg',
+        audio: 'audio/elbarco.mp3',
+        favorite: false
     },
     {
         id: 45,
-        title: 'Ocean',
-        artist: 'Karol G',
-        artistImage: 'img/artistas/ocean.jpg',
-        cover: 'img/ocean.jpg',
-        audio: 'audio/ocean.mp3',
-        favorite: false,
-        album: 'Ocean'
+        title: 'Créeme',
+        artist: 'Karol G, Maluma',
+        cover: 'IMG/creeme.jpg',
+        audio: 'audio/creeme.mp3',
+        favorite: false
     },
     {
         id: 46,
-        title: 'Punto G',
+        title: 'Ocean',
         artist: 'Karol G',
-        artistImage: 'img/artistas/puntog.jpg',
-        cover: 'img/puntog.jpg',
-        audio: 'audio/puntog.mp3',
-        favorite: false,
-        album: 'KG0516'
+        cover: 'IMG/ocean.jpg',
+        audio: 'audio/ocean.mp3',
+        favorite: false
     },
     {
         id: 47,
-        title: 'Tusa',
-        artist: 'Karol G, Nicki Minaj',
-        artistImage: 'img/artistas/tusa.jpg',
-        cover: 'img/tusa.jpg',
-        audio: 'audio/tusa.mp3',
-        favorite: false,
-        album: 'KG0516'
+        title: 'Punto G',
+        artist: 'Karol G',
+        cover: 'IMG/puntog.jpg',
+        audio: 'audio/puntog.mp3',
+        favorite: false
     },
     {
         id: 48,
-        title: 'Secreto',
-        artist: 'Anuel AA, Karol G',
-        artistImage: 'img/artistas/secreto.jpg',
-        cover: 'img/secreto.jpg',
-        audio: 'audio/secreto.mp3',
-        favorite: false,
-        album: 'Emmanuel'
+        title: 'Tusa',
+        artist: 'Karol G, Nicki Minaj',
+        cover: 'IMG/tusa.jpg',
+        audio: 'audio/tusa.mp3',
+        favorite: false
     },
     {
         id: 49,
-        title: 'A Ella',
-        artist: 'Karol G',
-        artistImage: 'img/artistas/aella.jpg',
-        cover: 'img/aella.jpg',
-        audio: 'audio/aella.mp3',
-        favorite: false,
-        album: 'Unstoppable'
+        title: 'Secreto',
+        artist: 'Anuel AA, KAROL G',
+        cover: 'IMG/secreto.jpg',
+        audio: 'audio/secreto.mp3',
+        favorite: false
     },
     {
         id: 50,
-        title: 'Poblado',
-        artist: 'J Balvin, Karol G, Nicky Jam, Crissin, Totoy El Frio, Natan & Shander',
-        artistImage: 'img/artistas/poblado.jpg',
-        cover: 'img/poblado.jpg',
-        audio: 'audio/poblado.mp3',
-        favorite: false,
-        album: 'Jose'
+        title: 'A Ella',
+        artist: 'Karol G',
+        cover: 'IMG/aella.jpg',
+        audio: 'audio/aella.mp3',
+        favorite: false
     },
     {
         id: 51,
-        title: 'Cairo',
-        artist: 'Karol G, Ovy On The Drums',
-        artistImage: 'img/artistas/cairo.jpg',
-        cover: 'img/cairo.jpg',
-        audio: 'audio/cairo.mp3',
-        favorite: false,
-        album: 'KG0516'
+        title: 'Poblado',
+        artist: 'J. Balvin, Karol G, Nicky Jam, Crissin, Totoy El Frio, Natan & Shander',
+        cover: 'IMG/poblado.jpg',
+        audio: 'audio/poblado.mp3',
+        favorite: false
     },
     {
         id: 52,
-        title: 'Location',
-        artist: 'Karol G, Anuel AA, J Balvin',
-        artistImage: 'img/artistas/location.jpg',
-        cover: 'img/location.jpg',
-        audio: 'audio/location.mp3',
-        favorite: false,
-        album: 'KG0516'
+        title: 'Cairo',
+        artist: 'Karol G, Ovy On The Drums',
+        cover: 'IMG/cairo.jpg',
+        audio: 'audio/cairo.mp3',
+        favorite: false
     },
     {
         id: 53,
-        title: 'X Si Volvemos',
-        artist: 'Karol G, Romeo Santos',
-        artistImage: 'img/artistas/xsi.jpg',
-        cover: 'img/xsi.jpg',
-        audio: 'audio/xsi.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        title: 'Location',
+        artist: 'Karol G, Anuel AA, J Balvin',
+        cover: 'IMG/location.jpg',
+        audio: 'audio/location.mp3',
+        favorite: false
     },
     {
         id: 54,
-        title: 'Pero Tu',
-        artist: 'Karol G, Quevedo',
-        artistImage: 'img/artistas/perotu.jpg',
-        cover: 'img/perotu.jpg',
-        audio: 'audio/perotu.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        title: 'X Si Volvemos',
+        artist: 'Karol G, Romeo Santos',
+        cover: 'IMG/xsi.jpg',
+        audio: 'audio/xsi.mp3',
+        favorite: false
     },
     {
         id: 55,
-        title: 'China',
-        artist: 'Anuel AA, Karol G, J Balvin, Daddy Yankee, Ozuna',
-        artistImage: 'img/artistas/china.jpg',
-        cover: 'img/china.jpg',
-        audio: 'audio/china.mp3',
-        favorite: false,
-        album: 'Emmanuel'
+        title: 'Pero tu',
+        artist: 'Karol G x Quevedo',
+        cover: 'IMG/perotu.jpg',
+        audio: 'audio/perotu.mp3',
+        favorite: false
     },
     {
         id: 56,
-        title: 'GUCCI LOS PAÑOS',
-        artist: 'Karol G',
-        artistImage: 'img/artistas/gucci.jpg',
-        cover: 'img/gucci.jpg',
-        audio: 'audio/gucci.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        title: 'China',
+        artist: 'Anuel AA, Karol G, J. Balvin, Daddy Yankee, Ozuna',
+        cover: 'IMG/china.jpg',
+        audio: 'audio/china.mp3',
+        favorite: false
     },
     {
         id: 57,
-        title: 'Mientras Me Curo Del Cora',
+        title: 'GUCCI LOS PAÑOS',
         artist: 'Karol G',
-        artistImage: 'img/artistas/mientras.jpg',
-        cover: 'img/mientras.jpg',
-        audio: 'audio/mientras.mp3',
-        favorite: false,
-        album: 'KG0516'
+        cover: 'IMG/gucci.jpg',
+        audio: 'audio/gucci.mp3',
+        favorite: false
     },
     {
         id: 58,
-        title: 'S91',
+        title: 'Mientras Me Curo Del Cora',
         artist: 'Karol G',
-        artistImage: 'img/artistas/s91.jpg',
-        cover: 'img/s91.jpg',
-        audio: 'audio/s91.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        cover: 'IMG/mientras.jpg',
+        audio: 'audio/mientras.mp3',
+        favorite: false
     },
     {
         id: 59,
-        title: 'Contigo',
-        artist: 'Karol G, Tiësto',
-        artistImage: 'img/artistas/contigo.jpg',
-        cover: 'img/contigo.jpg',
-        audio: 'audio/contigo.mp3',
-        favorite: false,
-        album: 'Contigo'
+        title: 'S91',
+        artist: 'Karol G',
+        cover: 'IMG/s91.jpg',
+        audio: 'audio/s91.mp3',
+        favorite: false
     },
     {
         id: 60,
-        title: 'Tá OK',
-        artist: 'DENNIS, MC Kevin o Chris, Maluma, Karol G',
-        artistImage: 'img/artistas/taok.jpg',
-        cover: 'img/taok.jpg',
-        audio: 'audio/taok.mp3',
-        favorite: false,
-        album: 'Tá OK'
+        title: 'Contigo',
+        artist: 'Karol G, Tiësto',
+        cover: 'IMG/contigo.jpg',
+        audio: 'audio/contigo.mp3',
+        favorite: false
     },
     {
         id: 61,
-        title: '200 Copas',
-        artist: 'Karol G',
-        artistImage: 'img/artistas/200copas.jpg',
-        cover: 'img/200copas.jpg',
-        audio: 'audio/200copas.mp3',
-        favorite: false,
-        album: 'KG0516'
+        title: 'Tá OK',
+        artist: 'DENNIS, MC Kevin o Chris, Maluma, Karol G',
+        cover: 'IMG/taok.jpg',
+        audio: 'audio/taok.mp3',
+        favorite: false
     },
     {
         id: 62,
-        title: 'Qlona',
+        title: '200 Copas',
         artist: 'Karol G',
-        artistImage: 'img/artistas/qlona.jpg',
-        cover: 'img/qlona.jpg',
-        audio: 'audio/qlona.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        cover: 'IMG/200copas.jpg',
+        audio: 'audio/200copas.mp3',
+        favorite: false
     },
     {
         id: 63,
-        title: 'OKI DOKI',
+        title: 'Qlona',
         artist: 'Karol G',
-        artistImage: 'img/artistas/okidoki.jpg',
-        cover: 'img/okidoki.jpg',
-        audio: 'audio/okidoki.mp3',
-        favorite: false,
-        album: 'Mañana Será Bonito'
+        cover: 'IMG/qlona.jpg',
+        audio: 'audio/qlona.mp3',
+        favorite: false
     },
     {
         id: 64,
-        title: 'Money',
-        artist: 'Lisa',
-        artistImage: 'img/artistas/money.jpg',
-        cover: 'img/money.jpg',
-        audio: 'audio/money.mp3',
-        favorite: false,
-        album: 'Lalisa'
+        title: 'OKI DOKI',
+        artist: 'Karol G',
+        cover: 'IMG/okidoki.jpg',
+        audio: 'audio/okidoki.mp3',
+        favorite: false
     },
     {
         id: 65,
-        title: 'MOONLIT FLOOR',
+        title: 'Money',
         artist: 'Lisa',
-        artistImage: 'img/artistas/moonlitfloor.jpg',
-        cover: 'img/moonlitfloor.jpg',
-        audio: 'audio/moonlitfloor.mp3',
-        favorite: false,
-        album: 'Moonlit Floor'
+        cover: 'IMG/money.jpg',
+        audio: 'audio/money.mp3',
+        favorite: false
     },
     {
         id: 66,
-        title: 'FXCK UP THE WORLD',
+        title: 'MOONLIT FLOOR',
         artist: 'Lisa',
-        artistImage: 'img/artistas/fxckup.jpg',
-        cover: 'img/fxckup.jpg',
-        audio: 'audio/fxckup.mp3',
-        favorite: false,
-        album: 'Lalisa'
+        cover: 'IMG/kiss.jpg',
+        audio: 'audio/kiss.mp3',
+        favorite: false
     },
     {
         id: 67,
-        title: 'New Woman',
-        artist: 'Lisa ft. Rosalía',
-        artistImage: 'img/artistas/newwoman.jpg',
-        cover: 'img/newwoman.jpg',
-        audio: 'audio/newwoman.mp3',
-        favorite: false,
-        album: 'New Woman'
+        title: 'FXCK UP THE WORLD',
+        artist: 'Lisa',
+        cover: 'IMG/up.jpg',
+        audio: 'audio/up.mp3',
+        favorite: false
     },
     {
         id: 68,
-        title: 'Rapunzel',
-        artist: 'Lisa',
-        artistImage: 'img/artistas/rapunzel.jpg',
-        cover: 'img/rapunzel.jpg',
-        audio: 'audio/rapunzel.mp3',
-        favorite: false,
-        album: 'Lalisa'
+        title: 'New Woman',
+        artist: 'Lisa feat. Rosalía',
+        cover: 'IMG/new.jpg',
+        audio: 'audio/new.mp3',
+        favorite: false
     },
     {
         id: 69,
-        title: 'GABRIELA',
-        artist: 'KATSEYE',
-        artistImage: 'img/artistas/gabriela.jpg',
-        cover: 'img/gabriela.jpg',
-        audio: 'audio/gabriela.mp3',
-        favorite: false,
-        album: 'KATSEYE'
+        title: 'Rapunzel',
+        artist: 'Lisa',
+        cover: 'IMG/rapunzel.jpg',
+        audio: 'audio/rapunzel.mp3',
+        favorite: false
     },
     {
         id: 70,
-        title: '10 Mill Vidas',
-        artist: 'Jesse & Joy',
-        artistImage: 'img/artistas/10milvidas.jpg',
-        cover: 'img/10milvidas.jpg',
-        audio: 'audio/10milvidas.mp3',
-        favorite: false,
-        album: '10 Mill Vidas'
+        title: 'Ahora Me Llama',
+        artist: 'Karol G, Bad Bunny',
+        cover: 'IMG/mellama.jpg',
+        audio: 'audio/mellama.mp3',
+        favorite: true
     },
     {
         id: 71,
-        title: 'Hold On',
-        artist: 'Adele',
-        artistImage: 'img/artistas/holdon.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/holdon.mp3',
-        favorite: false,
-        album: '30'
+        title: 'Location',
+        artist: 'KAROL G, Anuel AA, J. Balvin',
+        cover: 'IMG/location.jpg',
+        audio: 'audio/location.mp3',
+        favorite: false
     },
     {
         id: 72,
-        title: 'I Drink Wine',
-        artist: 'Adele',
-        artistImage: 'img/artistas/idrinkwine.jpg',
-        cover: 'img/idrinkwine.jpg',
-        audio: 'audio/idrinkwine.mp3',
-        favorite: false,
-        album: '30'
+        title: 'GABRIELA',
+        artist: 'KATSEYE',
+        cover: 'IMG/gabriela.jpg',
+        audio: 'audio/gabriela.mp3',
+        favorite: false
     },
     {
         id: 73,
-        title: 'Love Is A Game',
-        artist: 'Adele',
-        artistImage: 'img/artistas/loveisagame.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/loveisagame.mp3',
-        favorite: false,
-        album: '30'
+        title: 'EL MAKINON',
+        artist: 'KAROL G, Mariah Angeliq',
+        cover: 'IMG/makinon.jpg',
+        audio: 'audio/makinon.mp3',
+        favorite: false
     },
     {
         id: 74,
-        title: 'My Little Love',
-        artist: 'Adele',
-        artistImage: 'img/artistas/mylittlelove.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/mylittlelove.mp3',
-        favorite: false,
-        album: '30'
+        title: '10 Mill Vidas',
+        artist: 'Jesse & Joy',
+        cover: 'IMG/10milvidas.jpg',
+        audio: 'audio/10milvidas.mp3',
+        favorite: false
     },
     {
         id: 75,
-        title: 'Oh My God',
+        title: 'Hold On',
         artist: 'Adele',
-        artistImage: 'img/artistas/ohmygod.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/ohmygod.mp3',
-        favorite: false,
-        album: '30'
+        cover: 'IMG/HoldOn.jpg',
+        audio: 'audio/HoldOn.mp3',
+        favorite: false
     },
     {
         id: 76,
-        title: 'Strangers By Nature',
+        title: 'I Drink Wine',
         artist: 'Adele',
-        artistImage: 'img/artistas/strangersbynature.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/strangersbynature.mp3',
-        favorite: false,
-        album: '30'
+        cover: 'IMG/IDrinkWin.jpg',
+        audio: 'audio/IDrinkWine.mp3',
+        favorite: false
     },
     {
         id: 77,
-        title: 'To Be Loved',
+        title: 'Love Is A Game',
         artist: 'Adele',
-        artistImage: 'img/artistas/tobeloved.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/tobeloved.mp3',
-        favorite: false,
-        album: '30'
+        cover: 'IMG/Love Is A Game.jpg',
+        audio: 'audio/LoveIsAGame.mp3',
+        favorite: false
     },
     {
         id: 78,
-        title: 'Rolling in the Deep',
+        title: 'My Little Love',
         artist: 'Adele',
-        artistImage: 'img/artistas/rollinginthedeep.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/rollinginthedeep.mp3',
-        favorite: false,
-        album: '21'
+        cover: 'IMG/My Little Love.jpg',
+        audio: 'audio/MyLittleLove.mp3',
+        favorite: false
     },
     {
         id: 79,
+        title: 'Oh My God',
+        artist: 'Adele',
+        cover: 'IMG/Oh My God.jpg',
+        audio: 'audio/OhMyGod.mp3',
+        favorite: false
+    },
+    {
+        id: 80,
+        title: 'Strangers By Nature',
+        artist: 'Adele',
+        cover: 'IMG/Strangers By Nature.jpg',
+        audio: 'audio/StrangersByNature.mp3',
+        favorite: false
+    },
+    {
+        id: 81,
+        title: 'To Be Loved',
+        artist: 'Adele',
+        cover: 'IMG/To Be Loved.jpg',
+        audio: 'audio/ToBeLoved.mp3',
+        favorite: false
+    },
+    {
+        id: 82,
+        title: 'Rolling in the Deep',
+        artist: 'Adele',
+        cover: 'IMG/Rolling in the Deep.jpg',
+        audio: 'audio/RollingInTheDeep.mp3',
+        favorite: false
+    },
+    {
+        id: 83,
         title: 'All Night Parking',
         artist: 'Adele',
-        artistImage: 'img/artistas/allnightparking.jpg',
-        cover: 'img/holdon.jpg',
-        audio: 'audio/allnightparking.mp3',
-        favorite: false,
-        album: '30'
+        cover: 'IMG/allnightparking.jpg',
+        audio: 'audio/AllNightParking.mp3',
+        favorite: false
     }
 ];
 
