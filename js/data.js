@@ -603,7 +603,11 @@ const songs = [
         favorite: false
     },
     {
+<<<<<<< Updated upstream
         id: 76,
+=======
+        id:76,
+>>>>>>> Stashed changes
         title: 'I Drink Wine',
         artist: 'Adele',
         cover: 'IMG/IDrinkWin.jpg',
@@ -620,6 +624,18 @@ const songs = [
     },
     {
         id: 78,
+<<<<<<< Updated upstream
+=======
+        id:77,
+        title: 'BLove Is A Game',
+        artist:'Adele',
+        cover:'IMG/Love Is A Game.jpg',
+        audio:'audio/Adele - Love Is A Game (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false
+    },
+    {
+        id:78,
+>>>>>>> Stashed changes
         title: 'My Little Love',
         artist: 'Adele',
         cover: 'IMG/My Little Love.jpg',
