@@ -888,7 +888,98 @@ const songs = [
         audio: 'audio/Adele - Hold On (Official Lyric Video)(MP3_160K).mp3',
         favorite: false,
         album: '30'
-    }
+    },
+    {
+        id: 90,
+        title: 'Summertime Sadness',
+        artist: 'Lana Del Rey',
+        artistImage: 'img/LANA.jpg',
+        cover: 'img/LANA.jpg',
+        audio: 'audio/LANA.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 91,
+        title: 'One Of The Girls',
+        artist: 'Lana Del Rey',
+        artistImage: 'img/THE.jpg',
+        cover: 'img/THE.jpg',
+        audio: 'audio/THE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 92,
+        title: 'Love Me Like You Do',
+        artist: 'Ellie Goulding',
+        artistImage: 'img/LOVE.jpg',
+        cover: 'img/LOVE.jpg',
+        audio: 'audio/LOVE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 93,
+        title: 'Baile Inolvidable',
+        artist: 'Bad Bunny',
+        artistImage: 'img/BAILE.jpg',
+        cover: 'img/BAILE.jpg',
+        audio: 'audio/BAILE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 94,
+        title: 'DREAM',
+        artist: 'LISA feat. Kentaro Sakaguchi',
+        artistImage: 'img/DREAM.jpg',
+        cover: 'img/DREAM.jpg',
+        audio: 'audio/DREAM.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 95,
+        title: 'Alone',
+        artist: 'Alan Walker',
+        artistImage: 'img/alone.jpg',
+        cover: 'img/alone.jpg',
+        audio: 'audio/ALONE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 96,
+        title: 'LUNA',
+        artist: 'Zoe',
+        artistImage: 'img/LUNA.jpg',
+        cover: 'img/LUNA.jpg',
+        audio: 'audio/LUNA.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 97,
+        title: 'DUAL EP. [Full Album]',
+        artist: 'SANTOS BRAVOSy',
+        artistImage: 'img/DUAL.jpg',
+        cover: 'img/DUAL.jpg',
+        audio: 'audio/LANA.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 98,
+        title: 'Summertime Sadness',
+        artist: 'Lana Del Rey',
+        artistImage: 'img/BLOO.jpg',
+        cover: 'img/BLOO.jpg',
+        audio: 'audio/BLOO.mp3',
+        favorite: false,
+        album: '30'
+    },
+
 ];
 
 console.log('✅ data.js cargado correctamente');
