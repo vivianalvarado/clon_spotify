@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 // js/data.js
 // Datos de las canciones actualizados con Géneros y Reproducciones
 
 // Datos de las canciones
 // Corregido y actualizado
 
+=======
+>>>>>>> origin/develop
 const songs = [
     {
         id: 1,
@@ -12,9 +15,14 @@ const songs = [
         artistImage: 'img/artistas/amandote.jpg',
         cover: 'img/amandote.jpg',
         audio: 'audio/amandote.mp3',
+<<<<<<< HEAD
         genre: 'Pop',
         plays: 450,
         favorite: false
+=======
+        favorite: false,
+        album: 'Amandote'
+>>>>>>> origin/develop
     },
     {
         id: 2,
@@ -23,9 +31,14 @@ const songs = [
         artistImage: 'img/artistas/amarrame.jpg',
         cover: 'img/amarrame.jpg',
         audio: 'audio/amarrame.mp3',
+<<<<<<< HEAD
         genre: 'Alternativo',
         plays: 1200,
         favorite: false
+=======
+        favorite: false,
+        album: 'Amarrame'
+>>>>>>> origin/develop
     },
     {
         id: 3,
@@ -34,9 +47,14 @@ const songs = [
         artistImage: 'img/artistas/amorconhielo.jpg',
         cover: 'img/amorconhielo.jpg',
         audio: 'audio/amorconhielo.mp3',
+<<<<<<< HEAD
         genre: 'Pop-Rock',
         plays: 890,
         favorite: false
+=======
+        favorite: false,
+        album: 'Amor Con Hielo'
+>>>>>>> origin/develop
     },
     {
         id: 4,
@@ -45,9 +63,14 @@ const songs = [
         artistImage: 'img/artistas/butter.jpg',
         cover: 'img/butter.jpg',
         audio: 'audio/butter.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2500,
         favorite: false
+=======
+        favorite: false,
+        album: 'Butter'
+>>>>>>> origin/develop
     },
     {
         id: 5,
@@ -56,9 +79,14 @@ const songs = [
         artistImage: 'img/artistas/consejosdeamor.jpg',
         cover: 'img/consejosdeamor.jpg',
         audio: 'audio/consejosdeamor.mp3',
+<<<<<<< HEAD
         genre: 'Pop-Rock',
         plays: 670,
         favorite: false
+=======
+        favorite: false,
+        album: 'Cupido'
+>>>>>>> origin/develop
     },
     {
         id: 6,
@@ -67,9 +95,14 @@ const songs = [
         artistImage: 'img/artistas/cuandonadieve.jpg',
         cover: 'img/cuandonadieve.jpg',
         audio: 'audio/cuandonadieve.mp3',
+<<<<<<< HEAD
         genre: 'Pop-Rock',
         plays: 1100,
         favorite: false
+=======
+        favorite: false,
+        album: 'Balas Perdidas'
+>>>>>>> origin/develop
     },
     {
         id: 7,
@@ -78,9 +111,14 @@ const songs = [
         artistImage: 'img/artistas/dynamite.jpg',
         cover: 'img/dynamite.jpg',
         audio: 'audio/dynamite.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 3000,
         favorite: false
+=======
+        favorite: false,
+        album: 'BE'
+>>>>>>> origin/develop
     },
     {
         id: 8,
@@ -89,9 +127,14 @@ const songs = [
         artistImage: 'img/artistas/enguerra.jpg',
         cover: 'img/enguerra.jpg',
         audio: 'audio/enguerra.mp3',
+<<<<<<< HEAD
         genre: 'Pop-Rock',
         plays: 1500,
         favorite: false
+=======
+        favorite: false,
+        album: 'Fantasia'
+>>>>>>> origin/develop
     },
     {
         id: 9,
@@ -100,9 +143,14 @@ const songs = [
         artistImage: 'img/artistas/foreveryoung.jpg',
         cover: 'img/foreveryoung.jpg',
         audio: 'audio/foreveryoung.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 1800,
         favorite: false
+=======
+        favorite: false,
+        album: 'Square Up'
+>>>>>>> origin/develop
     },
     {
         id: 10,
@@ -111,9 +159,14 @@ const songs = [
         artistImage: 'img/artistas/howyoulikethat.jpg',
         cover: 'img/howyoulikethat.jpg',
         audio: 'audio/howyoulikethat.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2200,
         favorite: false
+=======
+        favorite: false,
+        album: 'The Album'
+>>>>>>> origin/develop
     },
     {
         id: 11,
@@ -122,9 +175,14 @@ const songs = [
         artistImage: 'img/artistas/idol.jpg',
         cover: 'img/idol.jpg',
         audio: 'audio/idol.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2100,
         favorite: false
+=======
+        favorite: false,
+        album: 'Love Yourself: Answer'
+>>>>>>> origin/develop
     },
     {
         id: 12,
@@ -133,9 +191,14 @@ const songs = [
         artistImage: 'img/artistas/killthislove.jpg',
         cover: 'img/killthislove.jpg',
         audio: 'audio/killthislove.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2400,
         favorite: false
+=======
+        favorite: false,
+        album: 'Kill This Love'
+>>>>>>> origin/develop
     },
     {
         id: 13,
@@ -144,9 +207,14 @@ const songs = [
         artistImage: 'img/artistas/lacorrecta.jpg',
         cover: 'img/lacorrecta.jpg',
         audio: 'audio/lacorrecta.mp3',
+<<<<<<< HEAD
         genre: 'Pop-Rock',
         plays: 750,
         favorite: false
+=======
+        favorite: false,
+        album: 'La Correcta'
+>>>>>>> origin/develop
     },
     {
         id: 14,
@@ -155,9 +223,14 @@ const songs = [
         artistImage: 'img/artistas/lalisa.jpg',
         cover: 'img/lalisa.jpg',
         audio: 'audio/lalisa.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2800,
         favorite: false
+=======
+        favorite: false,
+        album: 'Lalisa'
+>>>>>>> origin/develop
     },
     {
         id: 15,
@@ -166,9 +239,14 @@ const songs = [
         artistImage: 'img/artistas/lovesickgirls.jpg',
         cover: 'img/lovesickgirls.jpg',
         audio: 'audio/lovesickgirls.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 1900,
         favorite: false
+=======
+        favorite: false,
+        album: 'The Album'
+>>>>>>> origin/develop
     },
     {
         id: 16,
@@ -177,9 +255,14 @@ const songs = [
         artistImage: 'img/artistas/mantra.jpg',
         cover: 'img/mantra.jpg',
         audio: 'audio/mantra.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2000,
         favorite: false
+=======
+        favorite: false,
+        album: 'Mantra'
+>>>>>>> origin/develop
     },
     {
         id: 17,
@@ -188,9 +271,14 @@ const songs = [
         artistImage: 'img/artistas/mibuenamor.jpg',
         cover: 'img/mibuenamor.jpg',
         audio: 'audio/mibuenamor.mp3',
+<<<<<<< HEAD
         genre: 'Alternativo',
         plays: 1300,
         favorite: false
+=======
+        favorite: false,
+        album: 'La Trenza'
+>>>>>>> origin/develop
     },
     {
         id: 18,
@@ -199,9 +287,14 @@ const songs = [
         artistImage: 'img/artistas/ontheground.jpg',
         cover: 'img/ontheground.jpg',
         audio: 'audio/ontheground.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 1700,
         favorite: false
+=======
+        favorite: false,
+        album: 'R'
+>>>>>>> origin/develop
     },
     {
         id: 19,
@@ -210,9 +303,14 @@ const songs = [
         artistImage: 'img/artistas/pinkvenom.jpg',
         cover: 'img/pinkvenom.jpg',
         audio: 'audio/pinkvenom.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2600,
         favorite: false
+=======
+        favorite: false,
+        album: 'Born Pink'
+>>>>>>> origin/develop
     },
     {
         id: 20,
@@ -221,9 +319,14 @@ const songs = [
         artistImage: 'img/artistas/presiento.jpg',
         cover: 'img/presiento.jpg',
         audio: 'audio/presiento.mp3',
+<<<<<<< HEAD
         genre: 'Pop-Rock',
         plays: 950,
         favorite: false
+=======
+        favorite: false,
+        album: 'Balas Perdidas'
+>>>>>>> origin/develop
     },
     {
         id: 21,
@@ -232,9 +335,14 @@ const songs = [
         artistImage: 'img/artistas/rockstar.jpg',
         cover: 'img/rockstar.jpg',
         audio: 'audio/rockstar.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2700,
         favorite: false
+=======
+        favorite: false,
+        album: 'Rockstar'
+>>>>>>> origin/develop
     },
     {
         id: 22,
@@ -243,9 +351,14 @@ const songs = [
         artistImage: 'img/artistas/seven.jpg',
         cover: 'img/seven.jpg',
         audio: 'audio/seven.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2900,
         favorite: false
+=======
+        favorite: false,
+        album: 'Golden'
+>>>>>>> origin/develop
     },
     {
         id: 23,
@@ -254,9 +367,14 @@ const songs = [
         artistImage: 'img/artistas/solo.jpg',
         cover: 'img/solo.jpg',
         audio: 'audio/solo.mp3',
+<<<<<<< HEAD
         genre: 'K-pop',
         plays: 2300,
         favorite: false
+=======
+        favorite: false,
+        album: 'Solo'
+>>>>>>> origin/develop
     },
     {
         id: 24,
@@ -265,9 +383,14 @@ const songs = [
         artistImage: 'img/artistas/sourcandy.jpg',
         cover: 'img/sourcandy.jpg',
         audio: 'audio/sourcandy.mp3',
+<<<<<<< HEAD
         genre: 'Pop',
         plays: 1400,
         favorite: false
+=======
+        favorite: false,
+        album: 'Chromatica'
+>>>>>>> origin/develop
     },
     {
         id: 25,
@@ -276,9 +399,14 @@ const songs = [
         artistImage: 'img/artistas/tufaltadequerer.jpg',
         cover: 'img/tufaltadequerer.jpg',
         audio: 'audio/tufaltadequerer.mp3',
+<<<<<<< HEAD
         genre: 'Alternativo',
         plays: 1600,
         favorite: false
+=======
+        favorite: false,
+        album: 'Mon Laferte Vol. 1'
+>>>>>>> origin/develop
     },
     {
         id: 26,
@@ -287,9 +415,14 @@ const songs = [
         artistImage: 'img/artistas/vasaquerervolver.jpg',
         cover: 'img/vasaquerervolver.jpg',
         audio: 'audio/vasaquerervolver.mp3',
+<<<<<<< HEAD
         genre: 'Balada',
         plays: 500,
         favorite: false
+=======
+        favorite: false,
+        album: 'Eclipse de Luna'
+>>>>>>> origin/develop
     },
     {
         id: 27,
@@ -723,6 +856,7 @@ const songs = [
     },
     {
         id: 70,
+<<<<<<< HEAD
         title: 'Ahora Me Llama',
         artist: 'Karol G, Bad Bunny',
         cover: 'IMG/mellama.jpg',
@@ -734,12 +868,16 @@ const songs = [
     {
         id:71, 
         title:'10 Mill Vidas',
+=======
+        title: '10 Mill Vidas',
+>>>>>>> origin/develop
         artist: 'Jesse & Joy',
         artistImage: 'img/artistas/10milvidas.jpg',
         cover: 'img/10milvidas.jpg',
         audio: 'audio/10milvidas.mp3',
         favorite: false,
         album: '10 Mill Vidas'
+<<<<<<< HEAD
 
     },
     {
@@ -871,6 +1009,48 @@ const songs = [
         genre: 'Soul',
         plays: 800,
         favorite: false
+=======
+    },
+    {
+        id: 71,
+        title: 'Hold On',
+        artist: 'Adele',
+        artistImage: 'img/artistas/holdon.jpg',
+        cover: 'img/holdon.jpg',
+        audio: 'audio/holdon.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 72,
+        title: 'I Drink Wine',
+        artist: 'Adele',
+        artistImage: 'img/artistas/idrinkwine.jpg',
+        cover: 'img/idrinkwine.jpg',
+        audio: 'audio/idrinkwine.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 73,
+        title: 'Love Is A Game',
+        artist: 'Adele',
+        artistImage: 'img/artistas/loveisagame.jpg',
+        cover: 'img/holdon.jpg',
+        audio: 'audio/loveisagame.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 74,
+        title: 'My Little Love',
+        artist: 'Adele',
+        artistImage: 'img/artistas/mylittlelove.jpg',
+        cover: 'img/holdon.jpg',
+        audio: 'audio/mylittlelove.mp3',
+        favorite: false,
+        album: '30'
+>>>>>>> origin/develop
     },
 
     {
@@ -922,9 +1102,204 @@ const songs = [
         audio: 'audio/allnightparking.mp3',
         favorite: false,
         album: '30'
-    }
+    },
+    {
+        id: 80,
+        title: 'Blank Space',
+        artist: 'Taylor Swift',
+        artistImage: 'img/Blank_Space.jpg',
+        cover: 'img/Blank_Space.jpg',
+        audio: 'audio/Blank_Space.mp3',
+        favorite: false,
+        album: '1989'
+    },
+    {
+        id: 81,
+        title: 'Boy',
+        artist: 'BTS',
+        artistImage: 'img/boy.jpg',
+        cover: 'img/boy.jpg',
+        audio: 'audio/Boy.mp3',
+        favorite: false,
+        album: 'BTS'
+    },
+    {
+        id: 82,
+        title: 'Can I Get It',
+        artist: 'Adele',
+        artistImage: 'img/HoldOn.jpg',
+        cover: 'img/HoldOn.jpg',
+        audio: 'audio/canigenIt.mp3',
+        favorite: false,
+        album: '30'
+    },
+    // {
+        // id: 83,
+        // title: 'Chocolate',
+        // artist: 'Desconocido',
+        // artistImage: 'img/chocolate.jpg',
+        // cover: 'img/chocolate.jpg',
+        // audio: 'audio/chocolate.mp3',
+        // favorite: false,
+        // album: 'Chocolate'
+    // },
+    {
+        id: 84,
+        title: 'Cry Your Heart Out',
+        artist: 'Adele',
+        artistImage: 'img/HoldOn.jpg',
+        cover: 'img/HoldOn.jpg',
+        audio: 'audio/cryyourheartout.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 85,
+        title: 'Dope',
+        artist: 'BTS',
+        artistImage: 'img/boy.jpg',
+        cover: 'img/boy.jpg',
+        audio: 'audio/dope.mp3',
+        favorite: false,
+        album: 'The Most Beautiful Moment in Life'
+    },
+    {
+        id: 86,
+        title: 'Easy On Me',
+        artist: 'Adele',
+        artistImage: 'img/HoldOn.jpg',
+        cover: 'img/HoldOn.jpg',
+        audio: 'audio/easyonme.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 87,
+        title: 'Fifteen',
+        artist: 'Taylor Swift',
+        artistImage: 'img/fifteen.jpg',
+        cover: 'img/fifteen.jpg',
+        audio: 'audio/fifteen.mp3',
+        favorite: false,
+        album: 'Fearless'
+    },
+    {
+        id: 88,
+        title: 'If Only',
+        artist: 'Desconocido',
+        artistImage: 'img/if only.jpg',
+        cover: 'img/if only.jpg',
+        audio: 'audio/if only.mp3',
+        favorite: false,
+        album: 'If Only'
+    },
+    {
+        id: 89,
+        title: 'Hold On',
+        artist: 'Adele',
+        artistImage: 'img/HoldOn.jpg',
+        cover: 'img/HoldOn.jpg',
+        audio: 'audio/Adele - Hold On (Official Lyric Video)(MP3_160K).mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 90,
+        title: 'Summertime Sadness',
+        artist: 'Lana Del Rey',
+        artistImage: 'img/LANA.jpg',
+        cover: 'img/LANA.jpg',
+        audio: 'audio/LANA.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 91,
+        title: 'One Of The Girls',
+        artist: 'Lana Del Rey',
+        artistImage: 'img/THE.jpg',
+        cover: 'img/THE.jpg',
+        audio: 'audio/THE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 92,
+        title: 'Love Me Like You Do',
+        artist: 'Ellie Goulding',
+        artistImage: 'img/LOVE.jpg',
+        cover: 'img/LOVE.jpg',
+        audio: 'audio/LOVE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 93,
+        title: 'Baile Inolvidable',
+        artist: 'Bad Bunny',
+        artistImage: 'img/BAILE.jpg',
+        cover: 'img/BAILE.jpg',
+        audio: 'audio/BAILE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 94,
+        title: 'DREAM',
+        artist: 'LISA feat. Kentaro Sakaguchi',
+        artistImage: 'img/DREAM.jpg',
+        cover: 'img/DREAM.jpg',
+        audio: 'audio/DREAM.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 95,
+        title: 'Alone',
+        artist: 'Alan Walker',
+        artistImage: 'img/alone.jpg',
+        cover: 'img/alone.jpg',
+        audio: 'audio/ALONE.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 96,
+        title: 'LUNA',
+        artist: 'Zoe',
+        artistImage: 'img/LUNA.jpg',
+        cover: 'img/LUNA.jpg',
+        audio: 'audio/LUNA.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 97,
+        title: 'DUAL EP. [Full Album]',
+        artist: 'SANTOS BRAVOSy',
+        artistImage: 'img/DUAL.jpg',
+        cover: 'img/DUAL.jpg',
+        audio: 'audio/LANA.mp3',
+        favorite: false,
+        album: '30'
+    },
+    {
+        id: 98,
+        title: 'Summertime Sadness',
+        artist: 'Lana Del Rey',
+        artistImage: 'img/BLOO.jpg',
+        cover: 'img/BLOO.jpg',
+        audio: 'audio/BLOO.mp3',
+        favorite: false,
+        album: '30'
+    },
+
 ];
 
 console.log('✅ data.js cargado correctamente');
+<<<<<<< HEAD
 console.log('📀 Canciones disponibles:', songs.length);
 
+=======
+console.log('📀 Canciones disponibles:', songs.length);
+>>>>>>> origin/develop

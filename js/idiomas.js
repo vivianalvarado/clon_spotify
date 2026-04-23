@@ -1,7 +1,7 @@
 (function () {
   const STR = {
     es: {
-      doc_title: "Spotify Clone - Reproductor Musical",
+      doc_title: "Audiora - Reproductor Musical",
       nav_home: "Inicio",
       nav_explore: "Explorar",
       create_playlist: "Crear playlist",
@@ -38,7 +38,7 @@
       playlist_dev: "Funcionalidad de crear playlist en desarrollo",
     },
     en: {
-      doc_title: "Spotify Clone - Music Player",
+      doc_title: "Audiora - Music Player",
       nav_home: "Home",
       nav_explore: "Explore",
       create_playlist: "Create playlist",
@@ -75,7 +75,7 @@
       playlist_dev: "Create playlist is under development",
     },
     pt: {
-      doc_title: "Spotify Clone - Reprodutor musical",
+      doc_title: "Audiora - Reprodutor musical",
       nav_home: "Início",
       nav_explore: "Explorar",
       create_playlist: "Criar playlist",
@@ -112,7 +112,7 @@
       playlist_dev: "Criar playlist em desenvolvimento",
     },
     de: {
-      doc_title: "Spotify Clone – Musikplayer",
+      doc_title: "Audiora – Musikplayer",
       nav_home: "Start",
       nav_explore: "Entdecken",
       create_playlist: "Playlist erstellen",
@@ -149,7 +149,7 @@
       playlist_dev: "Playlist erstellen ist in Entwicklung",
     },
     it: {
-      doc_title: "Spotify Clone - Lettore musicale",
+      doc_title: "Audiora - Lettore musicale",
       nav_home: "Home",
       nav_explore: "Esplora",
       create_playlist: "Crea playlist",
@@ -186,7 +186,7 @@
       playlist_dev: "Creazione playlist in sviluppo",
     },
     ru: {
-      doc_title: "Spotify Clone — музыкальный плеер",
+      doc_title: "Audiora — музыкальный плеер",
       nav_home: "Главная",
       nav_explore: "Обзор",
       create_playlist: "Создать плейлист",
@@ -223,7 +223,7 @@
       playlist_dev: "Создание плейлиста в разработке",
     },
     ja: {
-      doc_title: "Spotify Clone - ミュージックプレーヤー",
+      doc_title: "Audiora - ミュージックプレーヤー",
       nav_home: "ホーム",
       nav_explore: "さがす",
       create_playlist: "プレイリストを作成",
@@ -260,7 +260,7 @@
       playlist_dev: "プレイリスト作成は開発中です",
     },
     ko: {
-      doc_title: "Spotify Clone - 뮤직 플레이어",
+      doc_title: "Audiora - 뮤직 플레이어",
       nav_home: "홈",
       nav_explore: "둘러보기",
       create_playlist: "플레이리스트 만들기",
@@ -297,7 +297,7 @@
       playlist_dev: "플레이리스트 만들기 기능 개발 중",
     },
     zh: {
-      doc_title: "Spotify Clone - 音乐播放器",
+      doc_title: "Audiora - 音乐播放器",
       nav_home: "首页",
       nav_explore: "浏览",
       create_playlist: "创建播放列表",

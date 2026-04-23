@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Spotify Clone - Reproductor Musical</title>
+    <title>AUDIORA - Reproductor Musical</title>
+    <link rel="icon" type="image/png" href="IMG/logo.png">
+    <link rel="apple-touch-icon" href="IMG/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -13,8 +15,8 @@
         <aside class="sidebar" id="sidebar">
                
             <div class="sidebar-logo">
-                <i class="fa-brands fa-spotify"></i>
-                <span class="logo-text">Spotify</span>
+                <img src="IMG/logo.png" alt="logo">
+                <span class="logo-text">Audiora</span>
             </div>
             
             <nav class="nav-section">
@@ -203,6 +205,15 @@
             </div>
             
             <div class="player-extras">
+                <button id="lyrics-btn" class="extra-btn" title="Ver letra">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <button id="connect-device-btn" class="extra-btn" title="Conectar dispositivo">
+                    <i class="fa-solid fa-radio"></i>
+                </button>
+                <button id="mini-player-btn" class="extra-btn" title="Mini reproductor">
+                    <i class="fa-solid fa-compress"></i>
+                </button>
                 <div class="volume-control">
                     <i class="fa-solid fa-volume-high" id="volume-icon"></i>
                     <div class="volume-slider" id="volume-bar">
@@ -212,13 +223,6 @@
             </div>
         </footer>
     </div>
-<<<<<<< HEAD
-    <div class="filter-chips">
-    <button onclick="mostrarMasEscuchados()">🔥 Tendencias</button>
-    <button onclick="filtrarPorGenero('K-pop')">✨ K-pop</button>
-    <button onclick="filtrarPorGenero('Pop')">🎵 Pop</button>
-</div>
-=======
 
     <!-- Modal para crear playlist -->
     <div class="modal-overlay" id="playlistModal">
@@ -233,9 +237,80 @@
         </div>
     </div>
 
->>>>>>> origin/develop
+    <!-- Mini Reproductor Modal -->
+    <div class="modal-overlay" id="miniPlayerModal">
+        <div class="mini-player-container">
+            <div class="mini-player-header">
+                <h3>Reproduciendo ahora</h3>
+                <button class="mini-player-close" id="mini-player-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="mini-player-content">
+                <img id="mini-player-album" src="https://via.placeholder.com/300" alt="Portada">
+                <h2 id="mini-player-title">Selecciona una canción</h2>
+                <p id="mini-player-artist">Artista</p>
+                <div class="mini-player-controls">
+                    <button id="mini-prev-btn" class="mini-control-btn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="mini-play-btn" class="mini-play-btn"><i class="fa-solid fa-circle-play"></i></button>
+                    <button id="mini-next-btn" class="mini-control-btn"><i class="fa-solid fa-forward-step"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Conectar Dispositivo -->
+    <div class="modal-overlay" id="connectDeviceModal">
+        <div class="connect-device-container">
+            <div class="connect-device-header">
+                <h3><i class="fa-solid fa-speaker"></i> Conectar a un dispositivo</h3>
+                <button class="connect-device-close" id="connect-device-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="connect-device-content">
+                <p class="connect-device-description">Selecciona dónde quieres reproducir tu música</p>
+                
+                <div class="devices-list" id="devices-list">
+                    <!-- Dispositivos se generarán con JS -->
+                </div>
+                
+                <button class="refresh-devices-btn" id="refresh-devices-btn">
+                    <i class="fa-solid fa-rotate"></i> Buscar dispositivos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Letras -->
+<div class="modal-overlay" id="lyricsModal">
+    <div class="lyrics-container">
+        <div class="lyrics-header">
+            <button class="lyrics-close-btn" id="lyrics-close-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="lyrics-song-info">
+                <h3 id="lyrics-song-title">Título de la canción</h3>
+                <p id="lyrics-artist-name">Artista</p>
+            </div>
+            <button class="lyrics-sync-btn" id="lyrics-sync-btn" title="Activar sincronización">
+                <i class="fa-solid fa-align-center"></i>
+            </button>
+        </div>
+        
+        <div class="lyrics-content" id="lyrics-content">
+            <div class="lyrics-text" id="lyrics-text">
+                <!-- Las letras se cargarán aquí -->
+            </div>
+        </div>
+        
+        <div class="lyrics-footer">
+            <p class="lyrics-source">Letras proporcionadas por Audiora</p>
+        </div>
+    </div>
+</div>
+
     <script src="js/data.js"></script>
     <script src="js/idiomas.js"></script>
+    <script src="js/lyrics.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
