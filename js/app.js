@@ -614,8 +614,6 @@ function loadLibraryContent() {
 
     function initLanguageSwitcher() {
         if (!window.AppI18n || !langDropdown || !langMenuBtn) return;
-
-<<<<<<< HEAD
 handleMobileMenu();
 window.addEventListener('resize', handleMobileMenu);
 // --- UBICACIÓN: Al final del archivo, antes de init(); ---
@@ -654,7 +652,7 @@ function filtrarPorGenero(generoSeleccionado) {
 }
 // Iniciar aplicación
 init();
-=======
+
         langDropdown.innerHTML = '';
         window.AppI18n.LANGS.forEach(langMeta => {
             const option = document.createElement('li');
